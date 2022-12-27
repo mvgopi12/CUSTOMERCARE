@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "Api1",
+    "name": "Referral",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -28,7 +28,7 @@
         },
         "pagination": {
           "data": {
-            "limit": "20000000",
+            "limit": "2000000",
             "offset": "0"
           }
         },
@@ -42,7 +42,7 @@
           "data": ""
         },
         "sheetName": {
-          "data": "LEADS"
+          "data": "Referral Leads"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
@@ -68,7 +68,7 @@
               {
                 "condition": "NOT_EQ",
                 "key": "REMARK",
-                "value": "NOT INTERESTED"
+                "value": "\"\""
               },
               {
                 "key": "CALLER",
@@ -97,12 +97,12 @@
     "jsonPathKeys": [
       "appsmith.user.username"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Api1",
+  "id": "Page1_Referral",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63a97bc6fcb7cc4992add4eb"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63639499f30f9143c9f06c8a"
 }
