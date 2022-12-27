@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "L_COUNT",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tC_LIVE: () => {\n\t\tlet count = 0;\n\t\tfor(let i = (LEADS.data.length-1); i>=0;i--){\n\t\t\tif(LEADS.data[i].REMARK == \"LIVE DATA\" && LEADS.data[i].ACTIVE == true){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tC_SCHD :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_CALLBACKS.data.length-1); i>=0;i--){\n\t\t\tif(L_CALLBACKS.data[i].REMARK == \"RNR\" || L_CALLBACKS.data[i].REMARK == \"CALL BACK\"  && L_CALLBACKS.data[i].ACTIVE == true){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tC_FOLLOWUPS :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (LEADS.data.length-1); i>=0;i--){\n\t\t\tif(LEADS.data[i].REMARK == \"INTERESTED\" || LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE == true){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tC_OLDLEADS :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (LEADS.data.length-1); i>=0;i--){\n\t\t\tif(LEADS.data[i].REMARK == \"OLD LEADS\" && LEADS.data[i].ACTIVE == true){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tC_TOTALCALLS :()=>{\n\t\tlet count =0;\n\t\tcount = L_COUNT.C_LIVE() + L_COUNT.C_SCHD() + L_COUNT.C_FOLLOWUPS() + L_COUNT.C_OLDLEADS();\n\t\treturn count;\n\t},\n\tBM_INSTALL :()=>{\n\t\tif(appsmith.user.username == \"sheela@lustralwater.com\" || appsmith.user.username ==\"sindhuvaspar@gmail.com\" || appsmith.user.username ==\"mvgopi@lustralwater.com\"){\n\t\t\treturn Banguluru_Installations.data[0].count;\n\t\t}else if(appsmith.user.username == \"a.shet@lustralwater.com\"){\n\t\t\treturn Mumbai_Installations.data[0].count;\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_L_COUNT",
+  "deleted": false,
+  "gitSyncId": "63634e3ebaf07e59ff35088c_636386f37045bd18a5ffa21a"
+}

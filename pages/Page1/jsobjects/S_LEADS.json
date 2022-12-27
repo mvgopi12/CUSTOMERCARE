@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "S_LEADS",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tLive_Leads: () => {\n\t\tlet data=[];\n\tfor (let i=0; i<LEADS.data.length; i++)\n\t{                                        \n\t\t\tif(LEADS.data[i].REMARK==\"LIVE DATA\" && LEADS.data[i].ACTIVE==true)\n\t\t\t{\n\t\t\t\tdata.push(LEADS.data[i]);\n\t\t\t}\n\t}\n\treturn data;\n\t},\n\tScheduled_Leads: ()=>{\n\t\tlet data=[];\n\tfor (let i=0; i<L_CALLBACKS.data.length; i++)\n\t{\t\n\t\tif(\t(L_CALLBACKS.data[i].SCHEDULE_DATE)<=DATE_FORMAT.get_today_with_minutes())\n\t\t{\n\t\t\tdata.push(L_CALLBACKS.data[i]);\n\t\t}\n\t}\n\t\tdata.sort((a,b)=>{\n\t\t\treturn new Date(b.SCHEDULE_DATE).getTime()  - new Date(a.SCHEDULE_DATE).getTime();\n\t\t});\n\t\treturn data;\n\t},\n\tFollowups_Leads:()=>{\n\t\tlet data=[];\n\tfor (let i=0; i<LEADS.data.length; i++)\n\t{\n\t\tif(LEADS.data[i].REMARK==\"INTERESTED\" || LEADS.data[i].REMARK==\"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE==true)\n\t\t{\n\t\t\tdata.push(LEADS.data[i]);\n\t\t}\n\t}\n\treturn data;\n\t},\n\tOld_Leads:()=>{\n\t\tlet returnData=[];\n\t\tfor (let i= (LEADS.data.length-1); i>=0;i--)\n\t\t{\n\t\t\t\tif(LEADS.data[i].REMARK== \"OLD LEADS\" && LEADS.data[i].ACTIVE==true)\n\t\t\t\t{\n\t\t\t\t\treturnData.push(LEADS.data[i])\n\t\t\t\t}\n\t\t}\n\t\treturn returnData\n\t},\n\tL_ACTIVE: ()=>{\n\t\tif(L_REMARK.selectedOptionValue == \"CALL BACK\" || A_REMARK.selectedOptionValue == \"CALL BACK\"){\n\t\t\treturn true;\n\t\t}else if(L_REMARK.selectedOptionValue == \"RNR\" || A_REMARK.selectedOptionValue == \"RNR\"){\n\t\t\treturn true;\n\t\t}else {\n\t\t\treturn false;\n\t\t}\n\t},\n\tL_RNR_SCHD :()=>{\n\t\tif(L_REMARK.selectedOptionValue == \"RNR\" || L_REMARK.selectedOptionValue == \"RNR\"){\n\t\t\treturn DATE_FORMAT.time();\n\t\t}\n\t},\n\tL_UPDATE :()=>{\n\t\tL_UPDATE.run()\n\t\tL_LOGS.run()\n\t},\n\tA_CUSTOMER :()=>{\n\t\tif(A_Name.text !=\"\" && A_NUM.text != \"\"){\n\t\t\t\tC_INSERT.run()\n\t\t\t\tL_LOGS.run()\n\t\t\t\tshowModal(\"LEAD_ADDED_Success\")\n\t\t}else{\n\t\t\tshowModal(\"emptyValues\")\n\t\t}\n\t},\n\tDR_DATA_INSERT :()=>{\n\t\tif(GET_DR.data[0].DATE == DATE_FORMAT.get_today()){\n\t\t\tshowModal(\"Failure\")\n\t\t}else{\n\t\t\tDR_INSERT.run()\n\t\t\tshowModal(\"Success\")\n\t\t}\n\t},\n\tSELECT_TAB :()=>{\n\t\tif(Tabs1.selectedTab == \"DAILY REPORT\"){\n\t\t\tL_GET_LOGS.run()\n\t\t\tGET_DR.run()\n\t\t} else if (Tabs1.selectedTab == \"DAILY LEADS\"){\n\t\t\tLEADS.run();\n\t\t\tL_CALLBACKS.run();\n\t\t}\n\t},\n\tmyFun2: async () => {\n\t\t\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_S_LEADS",
+  "deleted": false,
+  "gitSyncId": "63634e3ebaf07e59ff35088c_636352e3f30f9143c9f0650c"
+}

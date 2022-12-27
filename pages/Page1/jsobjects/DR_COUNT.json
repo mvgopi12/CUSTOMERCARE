@@ -1,0 +1,25 @@
+{
+  "unpublishedCollection": {
+    "name": "DR_COUNT",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tmyVar1: [],\n\tmyVar2: {},\n\tDR_RNR :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"RNR\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_CALLBACK :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"CALL BACK\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_INTERESTED :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"INTERESTED\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_DEMO :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"DEMO REQUESTE\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_NOTINTERESTED :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"NOT INTERESTED\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_SRN :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"SWITCH OFF/NOT REACHBLE\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_CUSTD :()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"CUSTOMER DISCONNECTING\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\tDR_WRONG:()=>{\n\t\tlet count = 0;\n\t\tfor(let i = (L_GET_LOGS.data.length-1); i>=0;i--){\n\t\t\tif(L_GET_LOGS.data[i].REMARKS == \"WRONG NUM\"){\n\t\t\t\tcount = count + 1;\n\t\t\t}\n\t\t}\n\t\treturn count;\n\t},\n\t\n\tDR_TOTALC :()=>{\n\t\tlet count =0;\n\t\tcount = DR_COUNT.DR_CALLBACK() + DR_COUNT.DR_CUSTD() + DR_COUNT.DR_DEMO() + DR_COUNT.DR_INTERESTED() + DR_COUNT.DR_NOTINTERESTED() + DR_COUNT.DR_RNR() + DR_COUNT.DR_SRN() + DR_COUNT.DR_WRONG();\n\t\treturn count;\n\t},\n\tmyFun2: async () => {\n\t\t//use async-await or promises\n\t}\n}",
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_DR_COUNT",
+  "deleted": false,
+  "gitSyncId": "63634e3ebaf07e59ff35088c_6364b7f803193515321c0315"
+}
