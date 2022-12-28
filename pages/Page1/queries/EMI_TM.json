@@ -69,6 +69,11 @@
                 "condition": "EQ",
                 "key": "SEC_EMI_STATUS",
                 "value": "UNPAID"
+              },
+              {
+                "key": "CALLER",
+                "condition": "EQ",
+                "value": "{{appsmith.user.username}}"
               }
             ]
           }
@@ -76,11 +81,17 @@
       }
     },
     "executeOnLoad": true,
-    "dynamicBindingPathList": [],
+    "dynamicBindingPathList": [
+      {
+        "key": "formData.where.data.children[1].value"
+      }
+    ],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [],
+    "jsonPathKeys": [
+      "appsmith.user.username"
+    ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
