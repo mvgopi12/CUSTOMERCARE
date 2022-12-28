@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "SELECT_TAB",
-    "fullyQualifiedName": "S_LEADS.SELECT_TAB",
+    "name": "ti",
+    "fullyQualifiedName": "DATE_FORMAT.ti",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_DATE_FORMAT",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    GET_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}",
+      "body": "() => {\n  let t = \"27/12/2022 16:57:22\";\n  let date = new Date(t).getTime();\n  return date;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    GET_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}"
+      "() => {\n  let t = \"27/12/2022 16:57:22\";\n  let date = new Date(t).getTime();\n  return date;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.SELECT_TAB",
+  "id": "Page1_DATE_FORMAT.ti",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364dc4503193515321c064b"
+  "gitSyncId": "63aa7cc6bc0e8334c729ca9c_63ac153ffcb7cc4992ae018d"
 }
