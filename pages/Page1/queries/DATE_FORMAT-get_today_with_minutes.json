@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return moment().format(\"YYYY-MM-DD HH:mm\");\n}",
+      "body": "() => {\n  return moment().format(\"YYYY/MM/DD HH:mm:ss\");\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return moment().format(\"YYYY-MM-DD HH:mm\");\n}"
+      "() => {\n  return moment().format(\"YYYY/MM/DD HH:mm:ss\");\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

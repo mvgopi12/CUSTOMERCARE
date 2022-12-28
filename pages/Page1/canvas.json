@@ -70,7 +70,7 @@
                   "widgetName": "Canvas1",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 1470,
+                  "bottomRow": 1510,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
@@ -131,7 +131,7 @@
                       ],
                       "shouldTruncate": false,
                       "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn \"LIVE DATA\"\n}else if(appsmith.store.button_Number==1)\n{\n\treturn \"SCHEDULED CALLS\"\n}else if(appsmith.store.button_Number==2)\n{\n\treturn \"FOLLOWUPS\"\n}\n\telse if(appsmith.store.button_Number==3)\n{\n\treturn \"OLD LEADS\"\n}\n})()}}",
+                      "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn \"DAILY LEADS\"\n}else if(appsmith.store.button_Number==1)\n{\n\treturn \"REFERRAL CALLS\"\n}\n})()}}",
                       "key": "ymamh3akis",
                       "isDeprecated": false,
                       "rightColumn": 64,
@@ -155,7 +155,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button1",
-                      "onClick": "{{LEADS.run(() => {\nstoreValue(\"button_Number\",0);\n\tif(isNaN(appsmith.store.current_Live_card)){\t\tstoreValue(\"current_Live_card\",0)}\n\tstoreValue(\"current_Live_card\",0)\n\t\nstoreValue(\"card\",S_LEADS.Live_Leads())\n}, () => {})}}",
+                      "onClick": "{{Api1.run(() => {\nstoreValue(\"button_Number\",0);\n\tif(isNaN(appsmith.store.current_Live_card)){\t\tstoreValue(\"current_Live_card\",0)}\n\tstoreValue(\"current_Live_card\",0)\n\t\nstoreValue(\"card\",JSObject1.myFun1())\n}, () => {})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -189,11 +189,11 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "LIVE DATA",
+                      "text": "DAILY LEADS",
                       "isDisabled": false,
                       "key": "5eyd3ty2fx",
                       "isDeprecated": false,
-                      "rightColumn": 16,
+                      "rightColumn": 22,
                       "isDefaultClickDisabled": true,
                       "widgetId": "zchgxewlmf",
                       "isVisible": true,
@@ -211,7 +211,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button2",
-                      "onClick": "{{L_CALLBACKS.run(() => {\nstoreValue(\"button_Number\",1);\n\tif(isNaN(appsmith.store.current_Schd_card)){\t\tstoreValue(\"current_Schd_card\",0)}\n\tstoreValue(\"current_Schd_card\",0)\n\t\nstoreValue(\"card\",S_LEADS.Scheduled_Leads())\n}, () => {})}}",
+                      "onClick": "{{Referral.run(() => {\nstoreValue(\"button_Number\",1);\n\tif(isNaN(appsmith.store.current_Schd_card)){\t\tstoreValue(\"current_Schd_card\",0)}\n\tstoreValue(\"current_Schd_card\",0)\n\t\nstoreValue(\"card\",JSObject1.Referral_Data())\n}, () => {})}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -236,7 +236,7 @@
                           "key": "onClick"
                         }
                       ],
-                      "leftColumn": 19,
+                      "leftColumn": 40,
                       "dynamicBindingPathList": [
                         {
                           "key": "buttonColor"
@@ -245,125 +245,13 @@
                           "key": "borderRadius"
                         }
                       ],
-                      "text": "SCHEDULED CALLS",
+                      "text": "REFERRAL",
                       "isDisabled": false,
                       "key": "5eyd3ty2fx",
                       "isDeprecated": false,
-                      "rightColumn": 32,
+                      "rightColumn": 59,
                       "isDefaultClickDisabled": true,
                       "widgetId": "e3kphg34yo",
-                      "isVisible": true,
-                      "recaptchaType": "V3",
-                      "version": 1,
-                      "parentId": "qnsbaca22l",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "disabledWhenInvalid": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "buttonVariant": "PRIMARY",
-                      "placement": "CENTER"
-                    },
-                    {
-                      "resetFormOnClick": false,
-                      "boxShadow": "none",
-                      "widgetName": "Button3",
-                      "onClick": "{{LEADS.run(() => {\nstoreValue(\"button_Number\",2);\n\tif(isNaN(appsmith.store.current_Followups_card)){\t\tstoreValue(\"current_Followups_card\",0)}\n\tstoreValue(\"current_Followups_card\",0)\n\t\nstoreValue(\"card\",S_LEADS.Followups_Leads())\n}, () => {})}}",
-                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-                      "searchTags": [
-                        "click",
-                        "submit"
-                      ],
-                      "topRow": 26,
-                      "bottomRow": 30,
-                      "parentRowSpace": 10,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 9.5927734375,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "leftColumn": 35,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "buttonColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "text": "FOLLOWUPS",
-                      "isDisabled": false,
-                      "key": "5eyd3ty2fx",
-                      "isDeprecated": false,
-                      "rightColumn": 48,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "i54ixr6xlq",
-                      "isVisible": true,
-                      "recaptchaType": "V3",
-                      "version": 1,
-                      "parentId": "qnsbaca22l",
-                      "renderMode": "CANVAS",
-                      "isLoading": false,
-                      "disabledWhenInvalid": false,
-                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-                      "buttonVariant": "PRIMARY",
-                      "placement": "CENTER"
-                    },
-                    {
-                      "resetFormOnClick": false,
-                      "boxShadow": "none",
-                      "widgetName": "Button4",
-                      "onClick": "{{LEADS.run(() => {\nstoreValue(\"button_Number\",3);\n\tif(isNaN(appsmith.store.current_Oldleads_card)){\t\tstoreValue(\"current_Oldleads_card\",0)}\n\tstoreValue(\"current_Oldleads_card\",0)\n\t\nstoreValue(\"card\",S_LEADS.Old_Leads())\n}, () => {})}}",
-                      "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-                      "dynamicPropertyPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "displayName": "Button",
-                      "iconSVG": "/static/media/icon.cca026338f1c8eb6df8ba03d084c2fca.svg",
-                      "searchTags": [
-                        "click",
-                        "submit"
-                      ],
-                      "topRow": 26,
-                      "bottomRow": 30,
-                      "parentRowSpace": 10,
-                      "type": "BUTTON_WIDGET",
-                      "hideCard": false,
-                      "animateLoading": true,
-                      "parentColumnSpace": 9.5927734375,
-                      "dynamicTriggerPathList": [
-                        {
-                          "key": "onClick"
-                        }
-                      ],
-                      "leftColumn": 51,
-                      "dynamicBindingPathList": [
-                        {
-                          "key": "buttonColor"
-                        },
-                        {
-                          "key": "borderRadius"
-                        }
-                      ],
-                      "text": "OLD LEADS",
-                      "isDisabled": false,
-                      "key": "5eyd3ty2fx",
-                      "isDeprecated": false,
-                      "rightColumn": 64,
-                      "isDefaultClickDisabled": true,
-                      "widgetId": "ca4re8xn02",
                       "isVisible": true,
                       "recaptchaType": "V3",
                       "version": 1,
@@ -835,7 +723,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].NAME\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].NAME\n}else if(appsmith.store.button_Number==2)\n{\n\treturn appsmith.store.card[appsmith.store.current_Followups_card].NAME\n}else if(appsmith.store.button_Number==3)\n{\n\treturn appsmith.store.card[appsmith.store.current_Oldleads_card].NAME\n}\n\t\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].NAME\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].NAME\n}\n})()}}",
                               "key": "ymamh3akis",
                               "isDeprecated": false,
                               "rightColumn": 43,
@@ -890,7 +778,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].PHONE_NUMBER\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].PHONE_NUMBER\n}else if(appsmith.store.button_Number==2)\n{\n\treturn appsmith.store.card[appsmith.store.current_Followups_card].PHONE_NUMBER\n}else if(appsmith.store.button_Number==3)\n{\n\treturn appsmith.store.card[appsmith.store.current_Oldleads_card].PHONE_NUMBER\n}\n\t\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].PHONE_NUMBER\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].PHONE_NUMBER\n}\n})()}}",
                               "key": "ymamh3akis",
                               "isDeprecated": false,
                               "rightColumn": 43,
@@ -945,7 +833,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].EMAIL\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].EMAIL\n}else if(appsmith.store.button_Number==2)\n{\n\treturn appsmith.store.card[appsmith.store.current_Followups_card].EMAIL\n}else if(appsmith.store.button_Number==3)\n{\n\treturn appsmith.store.card[appsmith.store.current_Oldleads_card].EMAIL\n}\n\t\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].EMAIL\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].EMAIL\n}\n})()}}",
                               "key": "ymamh3akis",
                               "isDeprecated": false,
                               "rightColumn": 43,
@@ -1000,7 +888,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].NOTE\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].NOTE\n}else if(appsmith.store.button_Number==2)\n{\n\treturn appsmith.store.card[appsmith.store.current_Followups_card].NOTE\n}else if(appsmith.store.button_Number==3)\n{\n\treturn appsmith.store.card[appsmith.store.current_Oldleads_card].NOTE\n}\n\t\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.store.button_Number==0)\n{\n\treturn appsmith.store.card[appsmith.store.current_Live_card].NOTE\n}\nelse if(appsmith.store.button_Number==1)\n{\n\treturn appsmith.store.card[appsmith.store.current_Schd_card].NOTE\n}\n})()}}",
                               "key": "ymamh3akis",
                               "isDeprecated": false,
                               "rightColumn": 52,
@@ -1655,6 +1543,61 @@
                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                       "buttonVariant": "PRIMARY",
                       "placement": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text53",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b523e6f70ba6f40a10fc2c7c5b5.svg",
+                      "searchTags": [
+                        "typography",
+                        "paragraph",
+                        "label"
+                      ],
+                      "topRow": 13,
+                      "bottomRow": 17,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "overflow": "NONE",
+                      "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+                      "parentColumnSpace": 9.5927734375,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 39,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "truncateButtonColor"
+                        },
+                        {
+                          "key": "fontFamily"
+                        },
+                        {
+                          "key": "borderRadius"
+                        },
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "shouldTruncate": false,
+                      "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "text": "REFERAL CALLS :{{L_COUNT.C_REFERRAL()}}",
+                      "key": "a9zsffdk0m",
+                      "isDeprecated": false,
+                      "rightColumn": 56,
+                      "textAlign": "LEFT",
+                      "dynamicHeight": "FIXED",
+                      "widgetId": "t2pt7uii9b",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "qnsbaca22l",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                      "maxDynamicHeight": 9000,
+                      "fontSize": "1rem",
+                      "minDynamicHeight": 4
                     }
                   ],
                   "isDisabled": false,
@@ -4600,6 +4543,9 @@
                                 },
                                 {
                                   "key": "primaryColumns.rowIndex.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.TECHNICIAN.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -4654,7 +4600,8 @@
                                 "DEVICE_PRICE",
                                 "REMARKS",
                                 "CALLER",
-                                "rowIndex"
+                                "rowIndex",
+                                "TECHNICIAN"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
@@ -5033,6 +4980,34 @@
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                                   "validation": {},
                                   "cellBackground": ""
+                                },
+                                "TECHNICIAN": {
+                                  "allowCellWrapping": false,
+                                  "index": 12,
+                                  "width": 150,
+                                  "originalId": "TECHNICIAN",
+                                  "id": "TECHNICIAN",
+                                  "alias": "TECHNICIAN",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "TECHNICIAN",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TECHNICIAN\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
                                 }
                               },
                               "key": "a15qjzvo5a",
@@ -5316,27 +5291,6 @@
                               "animateLoading": true,
                               "dynamicBindingPathList": [
                                 {
-                                  "key": "primaryColumns.step.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.task.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.status.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.computedValue"
-                                },
-                                {
-                                  "key": "primaryColumns.action.buttonColor"
-                                },
-                                {
-                                  "key": "primaryColumns.action.borderRadius"
-                                },
-                                {
-                                  "key": "primaryColumns.action.boxShadow"
-                                },
-                                {
                                   "key": "accentColor"
                                 },
                                 {
@@ -5347,6 +5301,57 @@
                                 },
                                 {
                                   "key": "tableData"
+                                },
+                                {
+                                  "key": "primaryColumns.DATE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.NAME.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.PHONE_NUMBER.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.EMI__TYPE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.DOWN_PAYMENT.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.SEC_EMI_DATE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.SEC_EMI_PAYMENT_DATE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.SEC_EMI_STATUS.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.SEC_EMI_AMOUNT.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.THIRD_EMI_DATE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.THIRD_EMI_PAYMENT_DATE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.THIRD_EMI_STATUS.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.THIRD_EMI_AMOUNT.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.DEVICE_PRICE.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.CALLER.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.TECHNICIAN.computedValue"
+                                },
+                                {
+                                  "key": "primaryColumns.rowIndex.computedValue"
                                 }
                               ],
                               "leftColumn": 1,
@@ -5389,14 +5394,27 @@
                               "widgetName": "Table3",
                               "defaultPageSize": 0,
                               "columnOrder": [
-                                "step",
-                                "task",
-                                "status",
-                                "action"
+                                "DATE",
+                                "NAME",
+                                "PHONE_NUMBER",
+                                "EMI__TYPE",
+                                "DOWN_PAYMENT",
+                                "SEC_EMI_DATE",
+                                "SEC_EMI_PAYMENT_DATE",
+                                "SEC_EMI_STATUS",
+                                "SEC_EMI_AMOUNT",
+                                "THIRD_EMI_DATE",
+                                "THIRD_EMI_PAYMENT_DATE",
+                                "THIRD_EMI_STATUS",
+                                "THIRD_EMI_AMOUNT",
+                                "DEVICE_PRICE",
+                                "CALLER",
+                                "TECHNICIAN",
+                                "rowIndex"
                               ],
                               "dynamicPropertyPathList": [],
                               "displayName": "Table",
-                              "bottomRow": 29,
+                              "bottomRow": 45,
                               "columnWidthMap": {
                                 "task": 245,
                                 "step": 62,
@@ -5408,94 +5426,481 @@
                               "dynamicTriggerPathList": [],
                               "borderWidth": "1",
                               "primaryColumns": {
-                                "step": {
+                                "DATE": {
+                                  "allowCellWrapping": false,
                                   "index": 0,
                                   "width": 150,
-                                  "id": "step",
-                                  "originalId": "step",
-                                  "alias": "step",
+                                  "originalId": "DATE",
+                                  "id": "DATE",
+                                  "alias": "DATE",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "text",
+                                  "columnType": "date",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
+                                  "isDisabled": false,
                                   "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "step",
-                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
+                                  "label": "DATE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DATE\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "cellBackground": ""
                                 },
-                                "task": {
+                                "NAME": {
+                                  "allowCellWrapping": false,
                                   "index": 1,
                                   "width": 150,
-                                  "id": "task",
-                                  "originalId": "task",
-                                  "alias": "task",
+                                  "originalId": "NAME",
+                                  "id": "NAME",
+                                  "alias": "NAME",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
+                                  "isDisabled": false,
                                   "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "task",
-                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
+                                  "label": "NAME",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NAME\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "cellBackground": ""
                                 },
-                                "status": {
+                                "PHONE_NUMBER": {
+                                  "allowCellWrapping": false,
                                   "index": 2,
                                   "width": 150,
-                                  "id": "status",
-                                  "originalId": "status",
-                                  "alias": "status",
+                                  "originalId": "PHONE_NUMBER",
+                                  "id": "PHONE_NUMBER",
+                                  "alias": "PHONE_NUMBER",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "PHONE_NUMBER",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"PHONE_NUMBER\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "EMI__TYPE": {
+                                  "allowCellWrapping": false,
+                                  "index": 3,
+                                  "width": 150,
+                                  "originalId": "EMI _TYPE",
+                                  "id": "EMI__TYPE",
+                                  "alias": "EMI _TYPE",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
                                   "columnType": "text",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
+                                  "isDisabled": false,
                                   "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "status",
-                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
+                                  "label": "EMI _TYPE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EMI _TYPE\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "cellBackground": ""
                                 },
-                                "action": {
-                                  "index": 3,
+                                "DOWN_PAYMENT": {
+                                  "allowCellWrapping": false,
+                                  "index": 4,
                                   "width": 150,
-                                  "id": "action",
-                                  "originalId": "action",
-                                  "alias": "action",
+                                  "originalId": "DOWN_PAYMENT",
+                                  "id": "DOWN_PAYMENT",
+                                  "alias": "DOWN_PAYMENT",
                                   "horizontalAlignment": "LEFT",
                                   "verticalAlignment": "CENTER",
-                                  "columnType": "button",
+                                  "columnType": "number",
+                                  "textColor": "",
                                   "textSize": "0.875rem",
+                                  "fontStyle": "",
                                   "enableFilter": true,
                                   "enableSort": true,
                                   "isVisible": true,
-                                  "isCellVisible": true,
-                                  "isCellEditable": false,
                                   "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
                                   "isDerived": false,
-                                  "label": "action",
-                                  "onClick": "{{currentRow.step === '#1' ? showAlert('Done', 'success') : currentRow.step === '#2' ? navigateTo('https://docs.appsmith.com/core-concepts/connecting-to-data-sources/querying-a-database',undefined,'NEW_WINDOW') : navigateTo('https://docs.appsmith.com/core-concepts/displaying-data-read/display-data-tables',undefined,'NEW_WINDOW')}}",
-                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"action\"]))}}",
+                                  "label": "DOWN_PAYMENT",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOWN_PAYMENT\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF",
-                                  "buttonColor": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
-                                  "borderRadius": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                  "boxShadow": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                                  "cellBackground": ""
+                                },
+                                "SEC_EMI_DATE": {
+                                  "allowCellWrapping": false,
+                                  "index": 5,
+                                  "width": 150,
+                                  "originalId": "SEC_EMI_DATE",
+                                  "id": "SEC_EMI_DATE",
+                                  "alias": "SEC_EMI_DATE",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "date",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "SEC_EMI_DATE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_DATE\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "SEC_EMI_PAYMENT_DATE": {
+                                  "allowCellWrapping": false,
+                                  "index": 6,
+                                  "width": 150,
+                                  "originalId": "SEC_EMI_PAYMENT_DATE",
+                                  "id": "SEC_EMI_PAYMENT_DATE",
+                                  "alias": "SEC_EMI_PAYMENT_DATE",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "date",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "SEC_EMI_PAYMENT_DATE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_PAYMENT_DATE\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "SEC_EMI_STATUS": {
+                                  "allowCellWrapping": false,
+                                  "index": 7,
+                                  "width": 150,
+                                  "originalId": "SEC_EMI_STATUS",
+                                  "id": "SEC_EMI_STATUS",
+                                  "alias": "SEC_EMI_STATUS",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "SEC_EMI_STATUS",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_STATUS\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "SEC_EMI_AMOUNT": {
+                                  "allowCellWrapping": false,
+                                  "index": 8,
+                                  "width": 150,
+                                  "originalId": "SEC_EMI_AMOUNT",
+                                  "id": "SEC_EMI_AMOUNT",
+                                  "alias": "SEC_EMI_AMOUNT",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "SEC_EMI_AMOUNT",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_AMOUNT\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "THIRD_EMI_DATE": {
+                                  "allowCellWrapping": false,
+                                  "index": 9,
+                                  "width": 150,
+                                  "originalId": "THIRD_EMI_DATE",
+                                  "id": "THIRD_EMI_DATE",
+                                  "alias": "THIRD_EMI_DATE",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "date",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "THIRD_EMI_DATE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_DATE\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "THIRD_EMI_PAYMENT_DATE": {
+                                  "allowCellWrapping": false,
+                                  "index": 10,
+                                  "width": 150,
+                                  "originalId": "THIRD_EMI_PAYMENT_DATE",
+                                  "id": "THIRD_EMI_PAYMENT_DATE",
+                                  "alias": "THIRD_EMI_PAYMENT_DATE",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "THIRD_EMI_PAYMENT_DATE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_PAYMENT_DATE\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "THIRD_EMI_STATUS": {
+                                  "allowCellWrapping": false,
+                                  "index": 11,
+                                  "width": 150,
+                                  "originalId": "THIRD_EMI_STATUS",
+                                  "id": "THIRD_EMI_STATUS",
+                                  "alias": "THIRD_EMI_STATUS",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "THIRD_EMI_STATUS",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_STATUS\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "THIRD_EMI_AMOUNT": {
+                                  "allowCellWrapping": false,
+                                  "index": 12,
+                                  "width": 150,
+                                  "originalId": "THIRD_EMI_AMOUNT",
+                                  "id": "THIRD_EMI_AMOUNT",
+                                  "alias": "THIRD_EMI_AMOUNT",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "THIRD_EMI_AMOUNT",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_AMOUNT\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "DEVICE_PRICE": {
+                                  "allowCellWrapping": false,
+                                  "index": 13,
+                                  "width": 150,
+                                  "originalId": "DEVICE_PRICE",
+                                  "id": "DEVICE_PRICE",
+                                  "alias": "DEVICE_PRICE",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "DEVICE_PRICE",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DEVICE_PRICE\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "CALLER": {
+                                  "allowCellWrapping": false,
+                                  "index": 14,
+                                  "width": 150,
+                                  "originalId": "CALLER",
+                                  "id": "CALLER",
+                                  "alias": "CALLER",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "CALLER",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CALLER\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "TECHNICIAN": {
+                                  "allowCellWrapping": false,
+                                  "index": 15,
+                                  "width": 150,
+                                  "originalId": "TECHNICIAN",
+                                  "id": "TECHNICIAN",
+                                  "alias": "TECHNICIAN",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "text",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": true,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "TECHNICIAN",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TECHNICIAN\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
+                                },
+                                "rowIndex": {
+                                  "allowCellWrapping": false,
+                                  "index": 16,
+                                  "width": 150,
+                                  "originalId": "rowIndex",
+                                  "id": "rowIndex",
+                                  "alias": "rowIndex",
+                                  "horizontalAlignment": "LEFT",
+                                  "verticalAlignment": "CENTER",
+                                  "columnType": "number",
+                                  "textColor": "",
+                                  "textSize": "0.875rem",
+                                  "fontStyle": "",
+                                  "enableFilter": true,
+                                  "enableSort": true,
+                                  "isVisible": false,
+                                  "isDisabled": false,
+                                  "isCellEditable": false,
+                                  "isEditable": false,
+                                  "isCellVisible": true,
+                                  "isDerived": false,
+                                  "label": "rowIndex",
+                                  "isSaveVisible": true,
+                                  "isDiscardVisible": true,
+                                  "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
+                                  "validation": {},
+                                  "cellBackground": ""
                                 }
                               },
                               "key": "m0dg0xy1hn",
@@ -5809,7 +6214,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button7",
-                      "onClick": "{{\n(()=>{\nS_LEADS.L_UPDATE()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\nLEADS.run()\nL_CALLBACKS.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
+                      "onClick": "{{\n(()=>{\nS_LEADS.L_UPDATE()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\nApi1.run()\nReferral.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -6133,7 +6538,7 @@
                       "boxShadow": "none",
                       "widgetName": "L_DATE",
                       "minDate": "1920-12-31T18:30:00.000Z",
-                      "dateFormat": "DD/MM/YYYY HH:mm",
+                      "dateFormat": "YYYY-MM-DD HH:mm",
                       "displayName": "DatePicker",
                       "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
                       "searchTags": [
@@ -7363,14 +7768,6 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_EMI_TM",
-              "name": "EMI_TM",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -7385,19 +7782,6 @@
           ],
           [
             {
-              "id": "Page1_L_CALLBACKS",
-              "name": "L_CALLBACKS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today_with_minutes()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Page1_LEADS",
               "name": "LEADS",
               "confirmBeforeExecute": false,
@@ -7406,9 +7790,39 @@
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Referral",
+              "name": "Referral",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
             }
           ],
           [
+            {
+              "id": "Page1_Api1",
+              "name": "Api1",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_TM",
+              "name": "EMI_TM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
             {
               "id": "Page1_L_GET_LOGS",
               "name": "L_GET_LOGS",

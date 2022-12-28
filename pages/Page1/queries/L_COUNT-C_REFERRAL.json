@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "C_LIVE",
-    "fullyQualifiedName": "L_COUNT.C_LIVE",
+    "name": "C_REFERRAL",
+    "fullyQualifiedName": "L_COUNT.C_REFERRAL",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,13 +19,12 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
+      "body": "() => {\n  let count = 0;\n  let data = JSObject1.Referral_Data();\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK != null) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
+      "() => {\n  let count = 0;\n  let data = JSObject1.Referral_Data();\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK != null) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_L_COUNT.C_LIVE",
+  "id": "Page1_L_COUNT.C_REFERRAL",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636386f37045bd18a5ffa216"
+  "gitSyncId": "63aa7cc6bc0e8334c729ca9c_63aac0ff647efb486b771aa2"
 }

@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let count = 0;\n  for (let i = LEADS.data.length - 1; i >= 0; i--) {\n    if (LEADS.data[i].REMARK == \"INTERESTED\" || LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
+      "body": "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"INTERESTED\" || data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || data[i].REMARK == \"CUSTOMER DISCONNECTING\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let count = 0;\n  for (let i = LEADS.data.length - 1; i >= 0; i--) {\n    if (LEADS.data[i].REMARK == \"INTERESTED\" || LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
+      "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"INTERESTED\" || data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || data[i].REMARK == \"CUSTOMER DISCONNECTING\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
@@ -43,5 +43,5 @@
   },
   "id": "Page1_L_COUNT.C_FOLLOWUPS",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636388327045bd18a5ffa237"
+  "gitSyncId": "63aa7cc6bc0e8334c729ca9c_63aa9c0f690c8f1a0335d351"
 }
