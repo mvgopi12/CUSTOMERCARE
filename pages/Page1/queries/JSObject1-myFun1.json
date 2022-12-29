@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = [];\n  for (let i = 0; i < Api1.data.length; i++) {\n    if (Api1.data[i].REMARK == \"LIVE DATA\") {\n      data.unshift(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"INTERESTED\" || Api1.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || Api1.data[i].REMARK == \"CUSTOMER DISCONNECTING\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].SCHEDULE_DATE <= DATE_FORMAT.get_today_with_minutes()) {\n      data.push(Api1.data[i]);\n    }\n    data.sort((a, b) => {\n      return new Date(b.SCHEDULE_DATE).getTime() - new Date(a.SCHEDULE_DATE).getTime();\n    });\n  }\n  return data;\n}",
+      "body": "() => {\n  let data = [];\n  for (let i = 0; i < Api1.data.length; i++) {\n    if (Api1.data[i].REMARK == \"LIVE DATA\") {\n      data.unshift(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"INTERESTED\" || Api1.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || Api1.data[i].REMARK == \"CUSTOMER DISCONNECTING\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"OLD LEADS\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].SCHEDULE_DATE <= DATE_FORMAT.get_today_with_minutes()) {\n      data.push(Api1.data[i]);\n    }\n    data.sort((a, b) => {\n      return new Date(b.SCHEDULE_DATE).getTime() - new Date(a.SCHEDULE_DATE).getTime();\n    });\n  }\n  return data;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = [];\n  for (let i = 0; i < Api1.data.length; i++) {\n    if (Api1.data[i].REMARK == \"LIVE DATA\") {\n      data.unshift(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"INTERESTED\" || Api1.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || Api1.data[i].REMARK == \"CUSTOMER DISCONNECTING\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].SCHEDULE_DATE <= DATE_FORMAT.get_today_with_minutes()) {\n      data.push(Api1.data[i]);\n    }\n    data.sort((a, b) => {\n      return new Date(b.SCHEDULE_DATE).getTime() - new Date(a.SCHEDULE_DATE).getTime();\n    });\n  }\n  return data;\n}"
+      "() => {\n  let data = [];\n  for (let i = 0; i < Api1.data.length; i++) {\n    if (Api1.data[i].REMARK == \"LIVE DATA\") {\n      data.unshift(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"INTERESTED\" || Api1.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" || Api1.data[i].REMARK == \"CUSTOMER DISCONNECTING\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].REMARK == \"OLD LEADS\") {\n      data.push(Api1.data[i]);\n    } else if (Api1.data[i].SCHEDULE_DATE <= DATE_FORMAT.get_today_with_minutes()) {\n      data.push(Api1.data[i]);\n    }\n    data.sort((a, b) => {\n      return new Date(b.SCHEDULE_DATE).getTime() - new Date(a.SCHEDULE_DATE).getTime();\n    });\n  }\n  return data;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
