@@ -7736,7 +7736,6 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Page1_Banguluru_Installations",
               "name": "Banguluru_Installations",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7744,7 +7743,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7752,7 +7750,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Mumbai_Installations",
               "name": "Mumbai_Installations",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7762,7 +7759,6 @@
           ],
           [
             {
-              "id": "Page1_EMI_THREEM",
               "name": "EMI_THREEM",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7772,7 +7768,6 @@
           ],
           [
             {
-              "id": "Page1_REMARKS",
               "name": "REMARKS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7782,7 +7777,6 @@
           ],
           [
             {
-              "id": "Page1_LEADS",
               "name": "LEADS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7792,7 +7786,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_Referral",
               "name": "Referral",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7804,7 +7797,6 @@
           ],
           [
             {
-              "id": "Page1_Api1",
               "name": "Api1",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7814,7 +7806,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_EMI_TM",
               "name": "EMI_TM",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7824,7 +7815,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_L_GET_LOGS",
               "name": "L_GET_LOGS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7837,7 +7827,6 @@
           ],
           [
             {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
               "name": "LEADS_NUMBER.L_PAGE",
               "collectionId": "Page1_LEADS_NUMBER",
               "confirmBeforeExecute": false,
