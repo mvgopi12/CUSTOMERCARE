@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 71,
+          "version": 75,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -1475,6 +1475,7 @@
                       "dynamicHeight": "FIXED",
                       "widgetId": "8snf1gw5tu",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "showStepArrows": true,
                       "isVisible": true,
                       "label": "",
                       "version": 2,
@@ -3882,7 +3883,7 @@
                                         "label"
                                       ],
                                       "topRow": 13,
-                                      "bottomRow": 18,
+                                      "bottomRow": 17,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -3935,8 +3936,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 20,
-                                      "bottomRow": 25,
+                                      "topRow": 19,
+                                      "bottomRow": 23,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -3989,8 +3990,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 27,
-                                      "bottomRow": 31,
+                                      "topRow": 25,
+                                      "bottomRow": 29,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -4043,8 +4044,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 33,
-                                      "bottomRow": 37,
+                                      "topRow": 31,
+                                      "bottomRow": 35,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -4187,6 +4188,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "jbgiugyux9",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -4243,6 +4245,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "ev33llsxlz",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -4299,6 +4302,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "1tpplwpsn9",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -4368,7 +4372,7 @@
                                       "resetFormOnClick": false,
                                       "boxShadow": "none",
                                       "widgetName": "Button20",
-                                      "onClick": "{{A_EMI_CUST.run()}}",
+                                      "onClick": "{{EMI.Insert_Details()}}",
                                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                                       "dynamicPropertyPathList": [
                                         {
@@ -7736,6 +7740,7 @@
         "layoutOnLoadActions": [
           [
             {
+              "id": "Page1_Banguluru_Installations",
               "name": "Banguluru_Installations",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7743,6 +7748,7 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7750,6 +7756,7 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_Mumbai_Installations",
               "name": "Mumbai_Installations",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7759,6 +7766,7 @@
           ],
           [
             {
+              "id": "Page1_EMI_THREEM",
               "name": "EMI_THREEM",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7768,6 +7776,7 @@
           ],
           [
             {
+              "id": "Page1_REMARKS",
               "name": "REMARKS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7777,6 +7786,20 @@
           ],
           [
             {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS",
               "name": "LEADS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7786,6 +7809,7 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_Referral",
               "name": "Referral",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7797,6 +7821,7 @@
           ],
           [
             {
+              "id": "Page1_Api1",
               "name": "Api1",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7806,6 +7831,7 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_EMI_TM",
               "name": "EMI_TM",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
@@ -7813,26 +7839,17 @@
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
-            },
+            }
+          ],
+          [
             {
+              "id": "Page1_L_GET_LOGS",
               "name": "L_GET_LOGS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
