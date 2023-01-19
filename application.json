@@ -10,6 +10,7 @@
   "unreadCommentThreads": 0,
   "color": "#D6D1F2",
   "icon": "shop",
+  "unpublishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
   "isManualUpdate": false,
