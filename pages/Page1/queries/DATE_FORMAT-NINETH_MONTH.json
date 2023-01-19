@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "Insert_Details",
-    "fullyQualifiedName": "EMI.Insert_Details",
+    "name": "NINETH_MONTH",
+    "fullyQualifiedName": "DATE_FORMAT.NINETH_MONTH",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_EMI",
+    "collectionId": "Page1_DATE_FORMAT",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (E_Type.selectedOptionValue == \"2 Months\") {\n    A_EMI_CUST.run();\n  } else if (E_Type.selectedOptionValue == \"3 Months\") {\n    A_TH_CUST.run();\n  } else if (E_Type.selectedOptionValue == \"8 Months\") {\n    A_EIGHT_CUST.run();\n  }\n}",
+      "body": "() => {\n  var date = new Date();\n  date.setDate(date.getDate() + 242);\n  let second = moment(date).format(\"DD/MM/YYYY\");\n  return second;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (E_Type.selectedOptionValue == \"2 Months\") {\n    A_EMI_CUST.run();\n  } else if (E_Type.selectedOptionValue == \"3 Months\") {\n    A_TH_CUST.run();\n  } else if (E_Type.selectedOptionValue == \"8 Months\") {\n    A_EIGHT_CUST.run();\n  }\n}"
+      "() => {\n  var date = new Date();\n  date.setDate(date.getDate() + 242);\n  let second = moment(date).format(\"DD/MM/YYYY\");\n  return second;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_EMI.Insert_Details",
+  "id": "Page1_DATE_FORMAT.NINETH_MONTH",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_639c4d4f4f35af560dc10895"
+  "gitSyncId": "63aa7cc6bc0e8334c729ca9c_63b3c0e63c0da0138a06b261"
 }
