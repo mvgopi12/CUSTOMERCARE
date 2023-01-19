@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = [];\n  for (let i = 0; i < EMI_THREEM.data.length; i++) {\n    if (EMI_THREEM.data[i].SEC_EMI_DATE == DATE_FORMAT.get_today() || EMI_THREEM.data[i].THIRD_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].CALLER == appsmith.user.username) {\n      data.push(EMI_THREEM.data[i]);\n    }\n  }\n  return data;\n}",
+      "body": "() => {\n  let data = [];\n  for (let i = 0; i < EMI_THREEM.data.length; i++) {\n    if (EMI_THREEM.data[i].SEC_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].SEC_EMI_STATUS == \"UNPAID\" && EMI_EIGHT.data[i].CALLER == appsmith.user.username || EMI_THREEM.data[i].THIRD_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].THIRD_EMI_STATUS == \"UNPAID\" && EMI_THREEM.data[i].CALLER == appsmith.user.username) {\n      data.push(EMI_THREEM.data[i]);\n    }\n  }\n  return data;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = [];\n  for (let i = 0; i < EMI_THREEM.data.length; i++) {\n    if (EMI_THREEM.data[i].SEC_EMI_DATE == DATE_FORMAT.get_today() || EMI_THREEM.data[i].THIRD_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].CALLER == appsmith.user.username) {\n      data.push(EMI_THREEM.data[i]);\n    }\n  }\n  return data;\n}"
+      "() => {\n  let data = [];\n  for (let i = 0; i < EMI_THREEM.data.length; i++) {\n    if (EMI_THREEM.data[i].SEC_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].SEC_EMI_STATUS == \"UNPAID\" && EMI_EIGHT.data[i].CALLER == appsmith.user.username || EMI_THREEM.data[i].THIRD_EMI_DATE == DATE_FORMAT.get_today() && EMI_THREEM.data[i].THIRD_EMI_STATUS == \"UNPAID\" && EMI_THREEM.data[i].CALLER == appsmith.user.username) {\n      data.push(EMI_THREEM.data[i]);\n    }\n  }\n  return data;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

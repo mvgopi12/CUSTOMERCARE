@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "A_EMI_CUST",
+    "name": "TH_EMI_UPDATE",
     "datasource": {
       "name": "EMI_CUSTOMERS",
       "pluginId": "google-sheets-plugin",
@@ -21,14 +21,14 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "INSERT_ONE"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
         },
         "pagination": {
           "data": {
-            "limit": "20000000",
+            "limit": "20",
             "offset": "0"
           }
         },
@@ -42,10 +42,10 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"DATE\" :DATE_FORMAT.get_today(),\n\t\"NAME\" :E_Name.text,\n\t\"PHONE_NUMBER\":E_Ph.text,\n\t\"EMI_TYPE\":E_Type.selectedOptionValue,\n\"DOWN_PAYMENT\":E_Downpayment.text,\n\"SEC_EMI_DATE\":DATE_FORMAT.SECOND_MONTH(),\n\"SEC_EMI_STATUS\":\"UNPAID\",\n\"DEVICE_PRICE\":E_Deviceprice.text,\n\"CALLER\":appsmith.user.username\n}\n}}"
+          "data": "{{\n\t{\n\t\"rowIndex\":Table3.selectedRow.rowIndex,\n\t\"SEC_EMI_PAYMENT_DATE\":TH_T_DATE.selectedDate,\n\t\"SEC_EMI_STATUS\":TH_T_STATUS.selectedOptionLabel,\n\t\"SEC_EMI_AMOUNT\":TH_T_AMOUNT.text,\n\t\t\"THIRD_EMI_PAYMENT_DATE\" : TH_DATE.selectedDate,\n\t\t\t\"THIRD_EMI_STATUS\" : TH_STATUS.selectedOptionLabel,\n\t\t\t\t\"THIRD_EMI_AMOUNT\" : TH_AMOUNT.text,\n\t\"REMARKS\":T_REMARKS.text\n\t}\n}}"
         },
         "sheetName": {
-          "data": "2M_EMI"
+          "data": "3M_EMI"
         },
         "sheetUrl": {
           "data": "https://docs.google.com/spreadsheets/d/1RM_BDeWCQfv50HIRjj9XQOEdn4gn6p6O6pqG2Op3UfI/edit"
@@ -73,14 +73,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{\n\t\"DATE\" :DATE_FORMAT.get_today(),\n\t\"NAME\" :E_Name.text,\n\t\"PHONE_NUMBER\":E_Ph.text,\n\t\"EMI_TYPE\":E_Type.selectedOptionValue,\n\"DOWN_PAYMENT\":E_Downpayment.text,\n\"SEC_EMI_DATE\":DATE_FORMAT.SECOND_MONTH(),\n\"SEC_EMI_STATUS\":\"UNPAID\",\n\"DEVICE_PRICE\":E_Deviceprice.text,\n\"CALLER\":appsmith.user.username\n}\n"
+      "\n\t{\n\t\"rowIndex\":Table3.selectedRow.rowIndex,\n\t\"SEC_EMI_PAYMENT_DATE\":TH_T_DATE.selectedDate,\n\t\"SEC_EMI_STATUS\":TH_T_STATUS.selectedOptionLabel,\n\t\"SEC_EMI_AMOUNT\":TH_T_AMOUNT.text,\n\t\t\"THIRD_EMI_PAYMENT_DATE\" : TH_DATE.selectedDate,\n\t\t\t\"THIRD_EMI_STATUS\" : TH_STATUS.selectedOptionLabel,\n\t\t\t\t\"THIRD_EMI_AMOUNT\" : TH_AMOUNT.text,\n\t\"REMARKS\":T_REMARKS.text\n\t}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_A_EMI_CUST",
+  "id": "Page1_TH_EMI_UPDATE",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_639c0cdd7b3ff97723beb21f"
+  "gitSyncId": "63aa7cc6bc0e8334c729ca9c_63ae784afcb7cc4992ae2a34"
 }
