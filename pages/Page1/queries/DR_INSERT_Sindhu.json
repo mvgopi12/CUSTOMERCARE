@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "L_GET_LOGS",
+    "name": "DR_INSERT_Sindhu",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -21,7 +21,7 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
@@ -41,41 +41,24 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n{\n\t\"DATE\" :DATE_FORMAT.get_today(),\n\t\"RNR\" :D_RNR.text,\n\t\"NOT INTERESTED\":D_NI.text,\n\t\"CALL BACK\":D_CB.text,\n\"INTERESTED\":D_INTERESTED.text,\n\"DEMO REQUEST\":D_DR.text,\n\"SWITCH OFF/NOT REACHBLE\":D_SNC.text,\n\"CUSTOMER DISCONNECTING\":D_CUSTDISC.text,\n\"WRONG NUM\":D_WN.text,\n\"TOTAL\":DR_T.text,\n\"CALLER\":appsmith.user.username\n}\n}}"
+        },
         "sheetName": {
-          "data": "LOGS"
+          "data": "Daily_Report"
         },
         "sheetUrl": {
-          "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
+          "data": "https://docs.google.com/spreadsheets/d/1ZQ2Q5lYb4zCcLURQdbiIhOunSdlOvzbvHpp3aWybLhY/edit"
         },
         "smartSubstitution": {
           "data": true
-        },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
         },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "EQ",
-                "key": "CALLER",
-                "value": "{{appsmith.user.username}}"
-              },
-              {
-                "key": "DATE",
-                "condition": "EQ",
-                "value": "{{DATE_FORMAT.get_today()}}"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
@@ -83,25 +66,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[0].value"
-      },
-      {
-        "key": "formData.where.data.children[1].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "DATE_FORMAT.get_today()",
-      "appsmith.user.username"
+      "\n{\n\t\"DATE\" :DATE_FORMAT.get_today(),\n\t\"RNR\" :D_RNR.text,\n\t\"NOT INTERESTED\":D_NI.text,\n\t\"CALL BACK\":D_CB.text,\n\"INTERESTED\":D_INTERESTED.text,\n\"DEMO REQUEST\":D_DR.text,\n\"SWITCH OFF/NOT REACHBLE\":D_SNC.text,\n\"CUSTOMER DISCONNECTING\":D_CUSTDISC.text,\n\"WRONG NUM\":D_WN.text,\n\"TOTAL\":DR_T.text,\n\"CALLER\":appsmith.user.username\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_L_GET_LOGS",
+  "id": "Page1_DR_INSERT_Sindhu",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364a6f71686912326879f33"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_6364befb4c80470350f60a21"
 }

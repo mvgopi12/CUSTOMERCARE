@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "Followups_Leads",
-    "fullyQualifiedName": "S_LEADS.Followups_Leads",
+    "name": "myFun2",
+    "fullyQualifiedName": "Sheela_DailyReport.myFun2",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,18 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_Sheela_DailyReport",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = [];\n  for (let i = 0; i < LEADS.data.length; i++) {\n    if (LEADS.data[i].REMARK == \"INTERESTED\" || LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE == true) {\n      data.push(LEADS.data[i]);\n    }\n  }\n  return data;\n}",
+      "body": "async () => {}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = [];\n  for (let i = 0; i < LEADS.data.length; i++) {\n    if (LEADS.data[i].REMARK == \"INTERESTED\" || LEADS.data[i].REMARK == \"SWITCH OFF/NOT REACHBLE\" && LEADS.data[i].ACTIVE == true) {\n      data.push(LEADS.data[i]);\n    }\n  }\n  return data;\n}"
+      "async () => {}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.Followups_Leads",
+  "id": "Page1_Sheela_DailyReport.myFun2",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63cb85478516cd46b3627ced"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63cb76eeaf0003311d22b5d3"
 }

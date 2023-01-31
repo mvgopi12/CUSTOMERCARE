@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "L_GET_LOGS",
+    "name": "Sindhu_DR",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -42,10 +42,10 @@
           "data": ""
         },
         "sheetName": {
-          "data": "LOGS"
+          "data": "Daily_Report"
         },
         "sheetUrl": {
-          "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
+          "data": "https://docs.google.com/spreadsheets/d/1ZQ2Q5lYb4zCcLURQdbiIhOunSdlOvzbvHpp3aWybLhY/edit"
         },
         "smartSubstitution": {
           "data": true
@@ -66,8 +66,8 @@
             "condition": "AND",
             "children": [
               {
-                "condition": "EQ",
                 "key": "CALLER",
+                "condition": "EQ",
                 "value": "{{appsmith.user.username}}"
               },
               {
@@ -101,7 +101,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_L_GET_LOGS",
+  "id": "Page1_Sindhu_DR",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364a6f71686912326879f33"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_6364f9de4c80470350f610cd"
 }

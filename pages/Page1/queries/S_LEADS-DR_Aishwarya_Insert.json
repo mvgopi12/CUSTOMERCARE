@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "SELECT_TAB",
-    "fullyQualifiedName": "S_LEADS.SELECT_TAB",
+    "name": "DR_Aishwarya_Insert",
+    "fullyQualifiedName": "S_LEADS.DR_Aishwarya_Insert",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    SindhuLogs.run();\n    SheelaLogs.run();\n    AishwaryaLogs.run();\n    Sindhu_DR.run();\n    Sheela_DR.run();\n    Aishwarya_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}",
+      "body": "() => {\n  if (Aishwarya_DR.data.length == 1) {\n    showModal(\"Failure\");\n  } else {\n    DR_Insert_Aishwarya.run();\n    showModal(\"Success\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    SindhuLogs.run();\n    SheelaLogs.run();\n    AishwaryaLogs.run();\n    Sindhu_DR.run();\n    Sheela_DR.run();\n    Aishwarya_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}"
+      "() => {\n  if (Aishwarya_DR.data.length == 1) {\n    showModal(\"Failure\");\n  } else {\n    DR_Insert_Aishwarya.run();\n    showModal(\"Success\");\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.SELECT_TAB",
+  "id": "Page1_S_LEADS.DR_Aishwarya_Insert",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364dc4503193515321c064b"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63cb92c53f7cc55e1ac75da7"
 }

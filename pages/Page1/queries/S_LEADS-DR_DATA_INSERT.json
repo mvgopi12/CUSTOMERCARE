@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (GET_DR.data[0].DATE == DATE_FORMAT.get_today()) {\n    showModal(\"Failure\");\n  } else {\n    DR_INSERT.run();\n    showModal(\"Success\");\n  }\n}",
+      "body": "() => {\n  if (Sindhu_DR.data[0].DATE == DATE_FORMAT.get_today()) {\n    showModal(\"Failure\");\n  } else {\n    DR_INSERT_Sindhu.run();\n    showModal(\"Success\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (GET_DR.data[0].DATE == DATE_FORMAT.get_today()) {\n    showModal(\"Failure\");\n  } else {\n    DR_INSERT.run();\n    showModal(\"Success\");\n  }\n}"
+      "() => {\n  if (Sindhu_DR.data[0].DATE == DATE_FORMAT.get_today()) {\n    showModal(\"Failure\");\n  } else {\n    DR_INSERT_Sindhu.run();\n    showModal(\"Success\");\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

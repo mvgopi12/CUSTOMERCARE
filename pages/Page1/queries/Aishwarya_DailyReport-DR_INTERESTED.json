@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "SELECT_TAB",
-    "fullyQualifiedName": "S_LEADS.SELECT_TAB",
+    "name": "DR_INTERESTED",
+    "fullyQualifiedName": "Aishwarya_DailyReport.DR_INTERESTED",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_Aishwarya_DailyReport",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    SindhuLogs.run();\n    SheelaLogs.run();\n    AishwaryaLogs.run();\n    Sindhu_DR.run();\n    Sheela_DR.run();\n    Aishwarya_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}",
+      "body": "() => {\n  let count = 0;\n  for (let i = AishwaryaLogs.data.length - 1; i >= 0; i--) {\n    if (AishwaryaLogs.data[i].REMARKS == \"INTERESTED\") {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (Tabs1.selectedTab == \"DAILY REPORT\") {\n    L_GET_LOGS.run();\n    SindhuLogs.run();\n    SheelaLogs.run();\n    AishwaryaLogs.run();\n    Sindhu_DR.run();\n    Sheela_DR.run();\n    Aishwarya_DR.run();\n  } else if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    LEADS.run();\n  }\n}"
+      "() => {\n  let count = 0;\n  for (let i = AishwaryaLogs.data.length - 1; i >= 0; i--) {\n    if (AishwaryaLogs.data[i].REMARKS == \"INTERESTED\") {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.SELECT_TAB",
+  "id": "Page1_Aishwarya_DailyReport.DR_INTERESTED",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364dc4503193515321c064b"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63cb77dbaf0003311d22b5f6"
 }

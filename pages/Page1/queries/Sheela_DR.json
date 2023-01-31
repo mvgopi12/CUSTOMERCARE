@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "L_GET_LOGS",
+    "name": "Sheela_DR",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -42,10 +42,10 @@
           "data": ""
         },
         "sheetName": {
-          "data": "LOGS"
+          "data": "Daily_Report"
         },
         "sheetUrl": {
-          "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
+          "data": "https://docs.google.com/spreadsheets/d/11Sf6Ljj58E4PEwNXXWR-6zuxPqw60RCgFkg6Cxiw3po/edit"
         },
         "smartSubstitution": {
           "data": true
@@ -67,13 +67,13 @@
             "children": [
               {
                 "condition": "EQ",
-                "key": "CALLER",
-                "value": "{{appsmith.user.username}}"
+                "key": "DATE",
+                "value": "{{DATE_FORMAT.get_today()}}"
               },
               {
-                "key": "DATE",
+                "key": "CALLER",
                 "condition": "EQ",
-                "value": "{{DATE_FORMAT.get_today()}}"
+                "value": "{{appsmith.user.username}}"
               }
             ]
           }
@@ -101,7 +101,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_L_GET_LOGS",
+  "id": "Page1_Sheela_DR",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_6364a6f71686912326879f33"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63cb7f288516cd46b3627ccd"
 }
