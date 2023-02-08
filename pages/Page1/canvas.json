@@ -7641,7 +7641,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button7",
-                      "onClick": "{{\n(()=>{\nS_LEADS.LeadsUpdate()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\n}}",
+                      "onClick": "{{\n(()=>{\nS_LEADS.LeadsUpdate()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\nApi1.run()\nReferral.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -13354,6 +13354,16 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_LEADS",
+              "name": "LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
@@ -13367,46 +13377,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_EMI_EIGHT",
-              "name": "EMI_EIGHT",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_EMI_THREEM",
-              "name": "EMI_THREEM",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_REMARKS",
-              "name": "REMARKS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_LEADS",
-              "name": "LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
               "timeoutInMillisecond": 10000
             },
             {
@@ -13422,17 +13392,6 @@
           ],
           [
             {
-              "id": "Page1_AishwaryaLogs",
-              "name": "AishwaryaLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_Api1",
               "name": "Api1",
               "confirmBeforeExecute": false,
@@ -13443,11 +13402,63 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_EMI_EIGHT",
+              "name": "EMI_EIGHT",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_THREEM",
+              "name": "EMI_THREEM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_EMI_TM",
               "name": "EMI_TM",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_REMARKS",
+              "name": "REMARKS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_AishwaryaLogs",
+              "name": "AishwaryaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
@@ -13471,19 +13482,6 @@
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
