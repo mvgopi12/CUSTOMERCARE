@@ -12,7 +12,7 @@ export default {
 		return moment().format("DD/MM/YYYY")
 	},
 	get_today_with_minutes: () =>{ //2022-08-30 11:15
-		return moment().format("YYYY/MM/DD HH:mm:ss");
+		return moment().format("YYYY/MM/DDTHH:mm:ss");
 	},
 	get_time:() => {
 		var today = new Date();

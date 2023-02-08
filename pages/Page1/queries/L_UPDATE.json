@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n\t{\n\t\"rowIndex\":LEADS_NUMBER.return_Current_Lead().rowIndex,\n\t\"REMARK\":L_REMARK.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":L_DATE.formattedDate ||S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":L_Note.text,\n\t\"ADDRESS\":L_Address.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}\n}}"
+          "data": "{{\n\t{\n\t\"rowIndex\":S_LEADS.IndexNum(),\n\t\"REMARK\":L_REMARK.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":L_DATE.formattedDate ||S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":L_Note.text,\n\t\"ADDRESS\":L_Address.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}\n}}"
         },
         "sheetName": {
           "data": "LEADS"
@@ -73,7 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "{\n\t\"rowIndex\":LEADS_NUMBER.return_Current_Lead().rowIndex,\n\t\"REMARK\":L_REMARK.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":L_DATE.formattedDate ||S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":L_Note.text,\n\t\"ADDRESS\":L_Address.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}"
+      "\n\t{\n\t\"rowIndex\":S_LEADS.IndexNum(),\n\t\"REMARK\":L_REMARK.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":L_DATE.formattedDate ||S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":L_Note.text,\n\t\"ADDRESS\":L_Address.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

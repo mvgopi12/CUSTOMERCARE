@@ -128,6 +128,15 @@ export default {
 			LEADS.run();
 		}
 	},
+	IndexNum:()=>{
+		const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;
+		const updatedRowIndex = rowIndex+1
+		return updatedRowIndex
+	},
+	LeadsUpdate :()=>{
+		L_UPDATE.run()
+		Sheela_Logs.run()
+	},
 	myFun2: async () => {
 
 	}

@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "get_today_with_minutes",
-    "fullyQualifiedName": "DATE_FORMAT.get_today_with_minutes",
+    "name": "LeadsUpdate",
+    "fullyQualifiedName": "S_LEADS.LeadsUpdate",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_DATE_FORMAT",
+    "collectionId": "Page1_S_LEADS",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return moment().format(\"YYYY/MM/DDTHH:mm:ss\");\n}",
+      "body": "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return moment().format(\"YYYY/MM/DDTHH:mm:ss\");\n}"
+      "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_DATE_FORMAT.get_today_with_minutes",
+  "id": "Page1_S_LEADS.LeadsUpdate",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636355917045bd18a5ff9cbb"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63e32d274fc63a0df6b8784f"
 }

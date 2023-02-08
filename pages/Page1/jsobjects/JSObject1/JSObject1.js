@@ -29,6 +29,15 @@ export default {
 		}
 		return data;
 	},
+	
+	RowIndex :()=>{
+		let data = Api1.data;
+		let freshData = [];
+		for(let i=0;i<data.length;i++){
+			freshData.push(Api1.data[i].rowIndex+2);
+		}
+		return freshData
+	},
 	myFun2: async () => {
 		//use async-await or promises
 	}

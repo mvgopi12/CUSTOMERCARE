@@ -3883,7 +3883,7 @@
                                         "label"
                                       ],
                                       "topRow": 13,
-                                      "bottomRow": 18,
+                                      "bottomRow": 17,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -3923,7 +3923,7 @@
                                       "originalTopRow": 13,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                                       "maxDynamicHeight": 9000,
-                                      "originalBottomRow": 17,
+                                      "originalBottomRow": 18,
                                       "fontSize": "1rem",
                                       "minDynamicHeight": 4
                                     },
@@ -3936,8 +3936,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 20,
-                                      "bottomRow": 25,
+                                      "topRow": 19,
+                                      "bottomRow": 23,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -3974,10 +3974,10 @@
                                       "parentId": "zwyz2ra1k0",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "originalTopRow": 19,
+                                      "originalTopRow": 20,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                                       "maxDynamicHeight": 9000,
-                                      "originalBottomRow": 23,
+                                      "originalBottomRow": 25,
                                       "fontSize": "1rem",
                                       "minDynamicHeight": 4
                                     },
@@ -3990,8 +3990,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 27,
-                                      "bottomRow": 31,
+                                      "topRow": 25,
+                                      "bottomRow": 29,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -4028,10 +4028,10 @@
                                       "parentId": "zwyz2ra1k0",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "originalTopRow": 25,
+                                      "originalTopRow": 27,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                                       "maxDynamicHeight": 9000,
-                                      "originalBottomRow": 29,
+                                      "originalBottomRow": 31,
                                       "fontSize": "1rem",
                                       "minDynamicHeight": 4
                                     },
@@ -4044,8 +4044,8 @@
                                         "paragraph",
                                         "label"
                                       ],
-                                      "topRow": 33,
-                                      "bottomRow": 37,
+                                      "topRow": 31,
+                                      "bottomRow": 35,
                                       "parentRowSpace": 10,
                                       "type": "TEXT_WIDGET",
                                       "hideCard": false,
@@ -4082,10 +4082,10 @@
                                       "parentId": "zwyz2ra1k0",
                                       "renderMode": "CANVAS",
                                       "isLoading": false,
-                                      "originalTopRow": 31,
+                                      "originalTopRow": 33,
                                       "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
                                       "maxDynamicHeight": 9000,
-                                      "originalBottomRow": 35,
+                                      "originalBottomRow": 37,
                                       "fontSize": "1rem",
                                       "minDynamicHeight": 4
                                     },
@@ -7641,7 +7641,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button7",
-                      "onClick": "{{\n(()=>{\nS_LEADS.L_UPDATE()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\nApi1.run()\nReferral.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
+                      "onClick": "{{\n(()=>{\nS_LEADS.LeadsUpdate()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tLEADS_NUMBER.next_Lead()\n\t}\ncloseModal(\"L_Details\")})()\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
@@ -13400,19 +13400,6 @@
           ],
           [
             {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Page1_LEADS",
               "name": "LEADS",
               "confirmBeforeExecute": false,
@@ -13435,6 +13422,17 @@
           ],
           [
             {
+              "id": "Page1_AishwaryaLogs",
+              "name": "AishwaryaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_Api1",
               "name": "Api1",
               "confirmBeforeExecute": false,
@@ -13450,19 +13448,6 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_AishwaryaLogs",
-              "name": "AishwaryaLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
@@ -13486,6 +13471,19 @@
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }

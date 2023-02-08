@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "get_today_with_minutes",
-    "fullyQualifiedName": "DATE_FORMAT.get_today_with_minutes",
+    "name": "IndexNum",
+    "fullyQualifiedName": "S_LEADS.IndexNum",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,12 +14,12 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_DATE_FORMAT",
+    "collectionId": "Page1_S_LEADS",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  return moment().format(\"YYYY/MM/DDTHH:mm:ss\");\n}",
+      "body": "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 1;\n  return updatedRowIndex;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  return moment().format(\"YYYY/MM/DDTHH:mm:ss\");\n}"
+      "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 1;\n  return updatedRowIndex;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_DATE_FORMAT.get_today_with_minutes",
+  "id": "Page1_S_LEADS.IndexNum",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636355917045bd18a5ff9cbb"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63e0a1691d880472b56b4fe2"
 }
