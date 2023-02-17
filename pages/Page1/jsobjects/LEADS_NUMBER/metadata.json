@@ -1,0 +1,24 @@
+{
+  "unpublishedCollection": {
+    "name": "LEADS_NUMBER",
+    "pageId": "Page1",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "variables": [
+      {
+        "name": "myVar1",
+        "value": "[]"
+      },
+      {
+        "name": "myVar2",
+        "value": "{}"
+      }
+    ],
+    "userPermissions": []
+  },
+  "id": "Page1_LEADS_NUMBER",
+  "deleted": false,
+  "gitSyncId": "63634e3ebaf07e59ff35088c_636359cb956dd31e95b0a98e"
+}
