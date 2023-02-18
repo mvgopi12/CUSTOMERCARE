@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 71,
+          "version": 76,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -1587,6 +1587,7 @@
                       "dynamicHeight": "FIXED",
                       "widgetId": "8snf1gw5tu",
                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "showStepArrows": true,
                       "isVisible": true,
                       "label": "",
                       "version": 2,
@@ -4244,6 +4245,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "jbgiugyux9",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -4300,6 +4302,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "ev33llsxlz",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -4356,6 +4359,7 @@
                                       "dynamicHeight": "FIXED",
                                       "widgetId": "1tpplwpsn9",
                                       "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                                      "showStepArrows": true,
                                       "isVisible": true,
                                       "label": "",
                                       "version": 2,
@@ -6269,7 +6273,7 @@
                       ],
                       "labelPosition": "Left",
                       "labelStyle": "",
-                      "inputType": "TEXT",
+                      "inputType": "MULTI_LINE_TEXT",
                       "isDisabled": false,
                       "key": "lgh28wcxry",
                       "labelTextSize": "0.875rem",
@@ -6377,7 +6381,7 @@
                       ],
                       "labelPosition": "Left",
                       "labelStyle": "",
-                      "inputType": "TEXT",
+                      "inputType": "MULTI_LINE_TEXT",
                       "isDisabled": false,
                       "key": "lgh28wcxry",
                       "labelTextSize": "0.875rem",
@@ -7339,6 +7343,16 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_LEADS",
+              "name": "LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
@@ -7385,24 +7399,25 @@
           ],
           [
             {
-              "id": "Page1_L_CALLBACKS",
-              "name": "L_CALLBACKS",
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
               "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
+              "pluginType": "JS",
               "jsonPathKeys": [
-                "DATE_FORMAT.get_today_with_minutes()",
-                "appsmith.user.username"
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
           ],
           [
             {
-              "id": "Page1_LEADS",
-              "name": "LEADS",
+              "id": "Page1_L_CALLBACKS",
+              "name": "L_CALLBACKS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
+                "DATE_FORMAT.get_today_with_minutes()",
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
@@ -7417,19 +7432,6 @@
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
