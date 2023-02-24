@@ -12,20 +12,20 @@ export default {
 		}
 		return data;
 	},
-	// SCHD :()=>{
-		// let data=[];
-	// for (let i=0; i<SCHD_CALLS.data.length; i++)
-	// {	
-		// if(	(SCHD_CALLS.data[i].SCHEDULE_DATE)<=DATE_FORMAT.get_today_with_minutes())
-		// {
-			// data.push(SCHD_CALLS.data[i]);
-		// }
-	// }
-		// data.sort((a,b)=>{
-			// return new Date(b.SCHEDULE_DATE).getTime()  - new Date(a.SCHEDULE_DATE).getTime();
-		// });
-		// return data;
-	// },
+	SCHD :()=>{
+		let data=[];
+	for (let i=0; i<SCHD_CALLS.data.length; i++)
+	{	
+		if(	(SCHD_CALLS.data[i].SCHEDULE_DATE)<=DATE_FORMAT.get_today_with_minutes())
+		{
+			data.push(SCHD_CALLS.data[i]);
+		}
+	}
+		data.sort((a,b)=>{
+			return new Date(b.SCHEDULE_DATE).getTime()  - new Date(a.SCHEDULE_DATE).getTime();
+		});
+		return data;
+	},
 	Followups_Leads:()=>{
 		let data=[];
 		for (let i=0; i<LEADS.data.length; i++)
