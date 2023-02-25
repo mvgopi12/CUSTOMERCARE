@@ -79,6 +79,21 @@
                 "key": "ACTIVE",
                 "condition": "EQ",
                 "value": "true"
+              },
+              {
+                "condition": "OR",
+                "children": [
+                  {
+                    "condition": "EQ",
+                    "key": "REMARK",
+                    "value": "RNR"
+                  },
+                  {
+                    "key": "REMARK",
+                    "condition": "EQ",
+                    "value": "CALL BACK"
+                  }
+                ]
               }
             ]
           }

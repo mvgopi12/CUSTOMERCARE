@@ -20,7 +20,7 @@ export default {
 		return time;
 	},
 	to_date:(dateString)=>{
-		let date=moment(dateString).format("YYYY-MM-DD")
+		let date=moment(dateString).format("DD/MM/YYYY")
 		return date;
 	},
 	until_end_of_month:()=>

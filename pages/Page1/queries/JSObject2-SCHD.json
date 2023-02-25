@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "Live_Leads",
-    "fullyQualifiedName": "S_LEADS.Live_Leads",
+    "name": "SCHD",
+    "fullyQualifiedName": "JSObject2.SCHD",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,18 +14,17 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_JSObject2",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = [];\n  for (let i = LEADS.data.length - 1; i >= 0; i--) {\n    if (LEADS.data[i].REMARK == \"LIVE DATA\" && LEADS.data[i].ACTIVE == true) {\n      data.push(LEADS.data[i]);\n    }\n  }\n  return data;\n}",
+      "body": "() => {\n  for (let i = 0; i < SCHD_CALLS.data.length; i++) {\n    let date = DATE_FORMAT.to_date(SCHD_CALLS.data[i].SCHEDULE_DATE);\n    if (date == DATE_FORMAT.get_today() && SCHD_CALLS.data[i].REMARK == \"RNR\" || SCHD_CALLS.data[i].REMARK == \"CALL BACK\") {\n      showModal(\"Modal2\");\n    }\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = [];\n  for (let i = LEADS.data.length - 1; i >= 0; i--) {\n    if (LEADS.data[i].REMARK == \"LIVE DATA\" && LEADS.data[i].ACTIVE == true) {\n      data.push(LEADS.data[i]);\n    }\n  }\n  return data;\n}"
+      "() => {\n  for (let i = 0; i < SCHD_CALLS.data.length; i++) {\n    let date = DATE_FORMAT.to_date(SCHD_CALLS.data[i].SCHEDULE_DATE);\n    if (date == DATE_FORMAT.get_today() && SCHD_CALLS.data[i].REMARK == \"RNR\" || SCHD_CALLS.data[i].REMARK == \"CALL BACK\") {\n      showModal(\"Modal2\");\n    }\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.Live_Leads",
+  "id": "Page1_JSObject2.SCHD",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636352e3f30f9143c9f06508"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63f9b20413cf946f38a46b7b"
 }

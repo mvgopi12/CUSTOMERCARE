@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"NAME\": A_Name.text,\n\t\"PHONE_NUMBER\":A_NUM.text,\n\t\"EMAIL\":A_EMAIL.text,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"REMARK\":A_REMARK.selectedOptionValue,\n\t\"SCHEDULE_DATE\":A_DATE.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\" : A_NOTE.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n}\n}}"
+          "data": "{{\n{\n\t\"NAME\": A_Name.text,\n\t\"PHONE_NUMBER\":A_NUM.text,\n\t\"EMAIL\":A_EMAIL.text,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"LEAD_DETAILS\":\"Incoming Call/Offline Campaign\",\n\t\"CALLER\" : appsmith.user.username,\n\t\"REMARK\":A_REMARK.selectedOptionValue,\n\t\"SCHEDULE_DATE\":A_DATE.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\" : A_NOTE.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n}\n}}"
         },
         "sheetName": {
           "data": "LEADS"
@@ -73,7 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "{\n\t\"NAME\": A_Name.text,\n\t\"PHONE_NUMBER\":A_NUM.text,\n\t\"EMAIL\":A_EMAIL.text,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"CALLER\" : appsmith.user.username,\n\t\"REMARK\":A_REMARK.selectedOptionValue,\n\t\"SCHEDULE_DATE\":A_DATE.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\" : A_NOTE.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n}"
+      "\n{\n\t\"NAME\": A_Name.text,\n\t\"PHONE_NUMBER\":A_NUM.text,\n\t\"EMAIL\":A_EMAIL.text,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"LEAD_DETAILS\":\"Incoming Call/Offline Campaign\",\n\t\"CALLER\" : appsmith.user.username,\n\t\"REMARK\":A_REMARK.selectedOptionValue,\n\t\"SCHEDULE_DATE\":A_DATE.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\" : A_NOTE.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

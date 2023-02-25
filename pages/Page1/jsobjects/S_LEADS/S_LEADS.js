@@ -3,7 +3,7 @@ export default {
 	myVar2: {},
 	Live_Leads: () => {
 		let data=[];
-		for (let i=0; i<LEADS.data.length; i++)
+		for (let i=LEADS.data.length-1; i>=0; i--)
 		{                                        
 			if(LEADS.data[i].REMARK=="LIVE DATA" && LEADS.data[i].ACTIVE==true)
 			{
