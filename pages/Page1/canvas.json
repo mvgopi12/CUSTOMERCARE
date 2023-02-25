@@ -7837,7 +7837,7 @@
                       "resetFormOnClick": false,
                       "boxShadow": "none",
                       "widgetName": "Button7",
-                      "onClick": "{{\n(async()=>{\nS_LEADS.L_UPDATE()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tshowModal(\"Modal1\")\n\t}\ncloseModal(\"L_Details\")})()\nApi1.run()\nReferral.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
+                      "onClick": "{{\n(()=>{\nS_LEADS.L_UPDATE()\nshowAlert(\"Updated! \",\"sucess\")\nif(appsmith.store.button_Number!=4)\n\t{\n\t\tshowModal(\"Modal1\")\n\t}\ncloseModal(\"L_Details\")})()\nApi1.run()\nSCHD_CALLS.run()\nReferral.run()\nresetWidget(\"L_REMARK\",true)\nresetWidget(\"L_DATE\",true)\nresetWidget(\"L_Note\",true)\nresetWidget(\"C_Search\",true)\n}}",
                       "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
                       "dynamicPropertyPathList": [
                         {
