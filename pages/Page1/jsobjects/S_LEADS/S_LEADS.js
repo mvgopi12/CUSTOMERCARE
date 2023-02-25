@@ -130,7 +130,7 @@ export default {
 	},
 	IndexNum:()=>{
 		const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;
-		const updatedRowIndex = rowIndex+1
+		const updatedRowIndex = rowIndex+2
 		return updatedRowIndex
 	},
 	LeadsUpdate :()=>{

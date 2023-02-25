@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 1;\n  return updatedRowIndex;\n}",
+      "body": "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 2;\n  return updatedRowIndex;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 1;\n  return updatedRowIndex;\n}"
+      "() => {\n  const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;\n  const updatedRowIndex = rowIndex + 2;\n  return updatedRowIndex;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
