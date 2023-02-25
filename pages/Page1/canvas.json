@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 76,
+          "version": 77,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -4698,6 +4698,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1677228206546,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -4763,7 +4764,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NAME": {
                                   "allowCellWrapping": false,
@@ -4791,7 +4793,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NAME\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "PHONE_NUMBER": {
                                   "allowCellWrapping": false,
@@ -4819,7 +4822,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"PHONE_NUMBER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EMI_TYPE": {
                                   "allowCellWrapping": false,
@@ -4847,7 +4851,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EMI_TYPE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DOWN_PAYMENT": {
                                   "allowCellWrapping": false,
@@ -4875,7 +4880,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOWN_PAYMENT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -4903,7 +4909,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -4931,7 +4938,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -4959,7 +4967,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -4987,7 +4996,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DEVICE_PRICE": {
                                   "allowCellWrapping": false,
@@ -5015,7 +5025,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DEVICE_PRICE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "REMARKS": {
                                   "allowCellWrapping": false,
@@ -5043,7 +5054,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"REMARKS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "CALLER": {
                                   "allowCellWrapping": false,
@@ -5071,7 +5083,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CALLER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "rowIndex": {
                                   "allowCellWrapping": false,
@@ -5099,7 +5112,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "TECHNICIAN": {
                                   "allowCellWrapping": false,
@@ -5127,11 +5141,13 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table1.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TECHNICIAN\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{showModal('TM_POPUP')}}",
                               "key": "a15qjzvo5a",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "textSize": "0.875rem",
@@ -5222,6 +5238,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1677228206546,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -5265,7 +5282,8 @@
                                   "label": "step",
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"step\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "sticky": ""
                                 },
                                 "task": {
                                   "index": 1,
@@ -5286,7 +5304,8 @@
                                   "label": "task",
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"task\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "sticky": ""
                                 },
                                 "status": {
                                   "index": 2,
@@ -5307,7 +5326,8 @@
                                   "label": "status",
                                   "computedValue": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"status\"]))}}",
                                   "validation": {},
-                                  "labelColor": "#FFFFFF"
+                                  "labelColor": "#FFFFFF",
+                                  "sticky": ""
                                 },
                                 "action": {
                                   "index": 3,
@@ -5333,10 +5353,12 @@
                                   "labelColor": "#FFFFFF",
                                   "buttonColor": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.colors.primaryColor))}}",
                                   "borderRadius": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( appsmith.theme.borderRadius.appBorderRadius))}}",
-                                  "boxShadow": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}"
+                                  "boxShadow": "{{Table2.processedTableData.map((currentRow, currentIndex) => ( 'none'))}}",
+                                  "sticky": ""
                                 }
                               },
                               "key": "m0dg0xy1hn",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "textSize": "0.875rem",
@@ -5509,6 +5531,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1677228206546,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -5577,7 +5600,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NAME": {
                                   "allowCellWrapping": false,
@@ -5605,7 +5629,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NAME\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "PHONE_NUMBER": {
                                   "allowCellWrapping": false,
@@ -5633,7 +5658,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"PHONE_NUMBER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EMI__TYPE": {
                                   "allowCellWrapping": false,
@@ -5661,7 +5687,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EMI _TYPE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DOWN_PAYMENT": {
                                   "allowCellWrapping": false,
@@ -5689,7 +5716,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOWN_PAYMENT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -5717,7 +5745,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -5745,7 +5774,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -5773,7 +5803,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -5801,7 +5832,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -5829,7 +5861,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -5857,7 +5890,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -5885,7 +5919,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -5913,7 +5948,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DEVICE_PRICE": {
                                   "allowCellWrapping": false,
@@ -5941,7 +5977,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DEVICE_PRICE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "CALLER": {
                                   "allowCellWrapping": false,
@@ -5969,7 +6006,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CALLER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "TECHNICIAN": {
                                   "allowCellWrapping": false,
@@ -5997,7 +6035,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TECHNICIAN\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "rowIndex": {
                                   "allowCellWrapping": false,
@@ -6025,11 +6064,13 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table3.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{showModal('TH_POPUP')}}",
                               "key": "m0dg0xy1hn",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 63,
                               "textSize": "0.875rem",
@@ -6255,6 +6296,7 @@
                                 }
                               },
                               "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                              "columnUpdatedAt": 1677228206546,
                               "defaultSelectedRowIndices": [
                                 0
                               ],
@@ -6347,7 +6389,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NAME": {
                                   "allowCellWrapping": false,
@@ -6375,7 +6418,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NAME\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "PHONE_NUMBER": {
                                   "allowCellWrapping": false,
@@ -6403,7 +6447,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"PHONE_NUMBER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EMI__TYPE": {
                                   "allowCellWrapping": false,
@@ -6431,7 +6476,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EMI _TYPE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DOWN_PAYMENT": {
                                   "allowCellWrapping": false,
@@ -6459,7 +6505,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DOWN_PAYMENT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -6487,7 +6534,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -6515,7 +6563,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -6543,7 +6592,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEC_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -6571,7 +6621,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEC_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -6599,7 +6650,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -6627,7 +6679,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -6655,7 +6708,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "THIRD_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -6683,7 +6737,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"THIRD_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FOUR_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -6711,7 +6766,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FOUR_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FOUR_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -6739,7 +6795,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FOUR_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FOUR_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -6767,7 +6824,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FOUR_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FOUR_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -6795,7 +6853,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FOUR_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FIFTH_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -6823,7 +6882,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FIFTH_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FIFTH_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -6851,7 +6911,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FIFTH_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FIFTH_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -6879,7 +6940,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FIFTH_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "FIFTH_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -6907,7 +6969,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"FIFTH_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SIXTH_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -6935,7 +6998,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SIXTH_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SIXTH_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -6963,7 +7027,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SIXTH_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SIXTH_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -6991,7 +7056,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SIXTH_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SIXTH_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -7019,7 +7085,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SIXTH_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEVENTH_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -7047,7 +7114,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEVENTH_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEVENTH_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -7075,7 +7143,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEVENTH_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEVENTH_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -7103,7 +7172,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEVENTH_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "SEVENTH_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -7131,7 +7201,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"SEVENTH_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EIGHTH_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -7159,7 +7230,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EIGHTH_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EIGHTH_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -7187,7 +7259,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EIGHTH_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EIGHTH_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -7215,7 +7288,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EIGHTH_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "EIGHTH_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -7243,7 +7317,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"EIGHTH_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NINEGTH_EMI_DATE": {
                                   "allowCellWrapping": false,
@@ -7271,7 +7346,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NINEGTH_EMI_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NINETH_EMI_PAYMENT_DATE": {
                                   "allowCellWrapping": false,
@@ -7299,7 +7375,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NINETH_EMI_PAYMENT_DATE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NINETH_EMI_STATUS": {
                                   "allowCellWrapping": false,
@@ -7327,7 +7404,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NINETH_EMI_STATUS\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "NINETH_EMI_AMOUNT": {
                                   "allowCellWrapping": false,
@@ -7355,7 +7433,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"NINETH_EMI_AMOUNT\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "DEVICE_PRICE": {
                                   "allowCellWrapping": false,
@@ -7383,7 +7462,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"DEVICE_PRICE\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "CALLER": {
                                   "allowCellWrapping": false,
@@ -7411,7 +7491,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"CALLER\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "TECHNICIAN": {
                                   "allowCellWrapping": false,
@@ -7439,7 +7520,8 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"TECHNICIAN\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 },
                                 "rowIndex": {
                                   "allowCellWrapping": false,
@@ -7467,11 +7549,13 @@
                                   "isDiscardVisible": true,
                                   "computedValue": "{{Table4.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"rowIndex\"]))}}",
                                   "validation": {},
-                                  "cellBackground": ""
+                                  "cellBackground": "",
+                                  "sticky": ""
                                 }
                               },
                               "onRowSelected": "{{showModal('CUSTOMER_ADDED')}}",
                               "key": "1wg6xkikcv",
+                              "canFreezeColumn": false,
                               "isDeprecated": false,
                               "rightColumn": 62,
                               "textSize": "0.875rem",
@@ -13466,16 +13550,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_LEADS",
-              "name": "LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
@@ -13490,29 +13564,9 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_Referral",
-              "name": "Referral",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [
-            {
-              "id": "Page1_Api1",
-              "name": "Api1",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
             {
               "id": "Page1_EMI_EIGHT",
               "name": "EMI_EIGHT",
@@ -13528,16 +13582,6 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_EMI_TM",
-              "name": "EMI_TM",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
             }
           ],
           [
@@ -13552,13 +13596,22 @@
           ],
           [
             {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
+              "id": "Page1_LEADS",
+              "name": "LEADS",
               "confirmBeforeExecute": false,
-              "pluginType": "JS",
+              "pluginType": "SAAS",
               "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Referral",
+              "name": "Referral",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }
@@ -13571,6 +13624,26 @@
               "pluginType": "SAAS",
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Api1",
+              "name": "Api1",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_TM",
+              "name": "EMI_TM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
@@ -13594,6 +13667,19 @@
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
               ],
               "timeoutInMillisecond": 10000
             }
