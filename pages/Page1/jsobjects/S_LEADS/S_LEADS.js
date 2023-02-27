@@ -75,9 +75,6 @@ export default {
 				Aishwarya_Logs.run()
 			}
 
-		}else if(appsmith.store.button_Number == 1){
-			R_UPDATE.run()
-			L_LOGS.run()
 		}
 	},
 	A_CUSTOMER :()=>{
