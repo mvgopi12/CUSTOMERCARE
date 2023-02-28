@@ -79,9 +79,19 @@ export default {
 	},
 	A_CUSTOMER :()=>{
 		if(A_Name.text !="" && A_NUM.text != ""){
+			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
 			C_INSERT.run()
-			L_LOGS.run()
-			showModal("LEAD_ADDED_Success")
+				Sheela_Logs.run()	
+				showModal("LEAD_ADDED_Success")
+			}else if(appsmith.user.username == "sindhuvaspar@gmail.com"){
+			C_INSERT.run()
+				Sindhu_Logs.run()
+				showModal("LEAD_ADDED_Success")
+			}else if(appsmith.user.username == "a.shet@lustralwater.com"){
+			C_INSERT.run()
+				Aishwarya_Logs.run()
+				showModal("LEAD_ADDED_Success")
+			}
 		}else{
 			showModal("emptyValues")
 		}
@@ -122,6 +132,7 @@ export default {
 			Sheela_DR.run()
 			Aishwarya_DR.run()
 		} else if (Tabs1.selectedTab == "DAILY LEADS"){
+			setInterval(()=>{JSObject2.SCHD();SCHD_CALLS.run()},1000)
 			LEADS.run();
 		}
 	},

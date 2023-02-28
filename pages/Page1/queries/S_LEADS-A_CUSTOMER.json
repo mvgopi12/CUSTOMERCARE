@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (A_Name.text != \"\" && A_NUM.text != \"\") {\n    C_INSERT.run();\n    L_LOGS.run();\n    showModal(\"LEAD_ADDED_Success\");\n  } else {\n    showModal(\"emptyValues\");\n  }\n}",
+      "body": "() => {\n  if (A_Name.text != \"\" && A_NUM.text != \"\") {\n    if (appsmith.user.username == \"sheela@lustralwater.com\" || appsmith.user.username == \"mvgopi@lustralwater.com\") {\n      C_INSERT.run();\n      Sheela_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    } else if (appsmith.user.username == \"sindhuvaspar@gmail.com\") {\n      C_INSERT.run();\n      Sindhu_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    } else if (appsmith.user.username == \"a.shet@lustralwater.com\") {\n      C_INSERT.run();\n      Aishwarya_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    }\n  } else {\n    showModal(\"emptyValues\");\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (A_Name.text != \"\" && A_NUM.text != \"\") {\n    C_INSERT.run();\n    L_LOGS.run();\n    showModal(\"LEAD_ADDED_Success\");\n  } else {\n    showModal(\"emptyValues\");\n  }\n}"
+      "() => {\n  if (A_Name.text != \"\" && A_NUM.text != \"\") {\n    if (appsmith.user.username == \"sheela@lustralwater.com\" || appsmith.user.username == \"mvgopi@lustralwater.com\") {\n      C_INSERT.run();\n      Sheela_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    } else if (appsmith.user.username == \"sindhuvaspar@gmail.com\") {\n      C_INSERT.run();\n      Sindhu_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    } else if (appsmith.user.username == \"a.shet@lustralwater.com\") {\n      C_INSERT.run();\n      Aishwarya_Logs.run();\n      showModal(\"LEAD_ADDED_Success\");\n    }\n  } else {\n    showModal(\"emptyValues\");\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
