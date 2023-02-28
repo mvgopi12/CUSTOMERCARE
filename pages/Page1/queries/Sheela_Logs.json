@@ -42,7 +42,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{\n\t\"NAME\" :L_NAME.text || A_Name.text,\n\t\"PHONE_NUMBER\" : L_NUM.text || A_NUM.text,\n\t\"REMARKS\":L_REMARK.selectedOptionLabel || A_REMARK.selectedOptionLabel,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n}}"
+          "data": "{{\n{\n\t\"NAME\" :JSObject2.returnName(),\n\t\"PHONE_NUMBER\" : JSObject2.returnPH(),\n\t\"REMARKS\":JSObject2.returnRemarks(),\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n}}"
         },
         "sheetName": {
           "data": "LOGS"
@@ -73,7 +73,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "\n{\n\t\"NAME\" :L_NAME.text || A_Name.text,\n\t\"PHONE_NUMBER\" : L_NUM.text || A_NUM.text,\n\t\"REMARKS\":L_REMARK.selectedOptionLabel || A_REMARK.selectedOptionLabel,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n"
+      "\n{\n\t\"NAME\" :JSObject2.returnName(),\n\t\"PHONE_NUMBER\" : JSObject2.returnPH(),\n\t\"REMARKS\":JSObject2.returnRemarks(),\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
