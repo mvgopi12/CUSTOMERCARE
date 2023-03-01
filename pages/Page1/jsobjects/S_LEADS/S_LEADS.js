@@ -132,7 +132,11 @@ export default {
 			Sheela_DR.run()
 			Aishwarya_DR.run()
 		} else if (Tabs1.selectedTab == "DAILY LEADS"){
-			setInterval(()=>{JSObject2.SCHD();SCHD_CALLS.run()},1000)
+			// setInterval(JSObject2.SCHD(),1000)
+			setInterval(() => {JSObject2.SCHD() }, 10000, "myTimer");
+			// setInterval(() => {SCHD_CALLS.run() }, 1000, "myTimer");
+			SCHD_CALLS.run()
+			// JSObject2.SCHD()
 			LEADS.run();
 		}
 	},
@@ -146,6 +150,6 @@ export default {
 		Sheela_Logs.run()
 	},
 	myFun2: async () => {
-
+			
 	}
 }

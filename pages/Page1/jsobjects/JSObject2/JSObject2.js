@@ -18,6 +18,13 @@ export default {
 	 }
 		return data
 	},
+	
+	setIntervalFun :()=>{
+		console.log("Hello")
+	},
+	Interval :()=>{
+		return (setInterval(JSObject2.setIntervalFun(),1000))
+	},
 	returnName :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
 			return Text9.text

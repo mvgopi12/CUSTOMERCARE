@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "LeadsUpdate",
-    "fullyQualifiedName": "S_LEADS.LeadsUpdate",
+    "name": "onPageLoad",
+    "fullyQualifiedName": "PageLoad_exe.onPageLoad",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,18 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_PageLoad_exe",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}",
+      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 15000);\n  return \"success\";\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
+    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +35,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}"
+      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 15000);\n  return \"success\";\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.LeadsUpdate",
+  "id": "Page1_PageLoad_exe.onPageLoad",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63e32d274fc63a0df6b8784f"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63ff15872127687553736e87"
 }

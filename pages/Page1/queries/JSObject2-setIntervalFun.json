@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "LeadsUpdate",
-    "fullyQualifiedName": "S_LEADS.LeadsUpdate",
+    "name": "setIntervalFun",
+    "fullyQualifiedName": "JSObject2.setIntervalFun",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,15 +14,15 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_S_LEADS",
+    "collectionId": "Page1_JSObject2",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}",
+      "body": "() => {\n  console.log(\"Hello\");\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": true
+      "isAsync": false
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  L_UPDATE.run();\n  Sheela_Logs.run();\n}"
+      "() => {\n  console.log(\"Hello\");\n}"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_S_LEADS.LeadsUpdate",
+  "id": "Page1_JSObject2.setIntervalFun",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63e32d274fc63a0df6b8784f"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63fd9b1acba7d14432258568"
 }
