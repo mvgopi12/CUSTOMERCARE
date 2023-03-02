@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "RowIndex",
-    "fullyQualifiedName": "JSObject1.RowIndex",
+    "name": "Schedduled",
+    "fullyQualifiedName": "PageLoad_exe.Schedduled",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,17 @@
       "userPermissions": []
     },
     "pageId": "Page1",
-    "collectionId": "Page1_JSObject1",
+    "collectionId": "Page1_PageLoad_exe",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = Api1.data;\n  let freshData = [];\n  for (let i = 0; i < data.length; i++) {\n    freshData.push(Api1.data[i].rowIndex + 2);\n  }\n  return freshData;\n}",
+      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      SCHD_CALLS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = Api1.data;\n  let freshData = [];\n  for (let i = 0; i < data.length; i++) {\n    freshData.push(Api1.data[i].rowIndex + 2);\n  }\n  return freshData;\n}"
+      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      SCHD_CALLS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
     ],
-    "userSetOnLoad": false,
+    "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_JSObject1.RowIndex",
+  "id": "Page1_PageLoad_exe.Schedduled",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63e38d941e242279f590d16c"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_64002d5c2fe671394a809905"
 }

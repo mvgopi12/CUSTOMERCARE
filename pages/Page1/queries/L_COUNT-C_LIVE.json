@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
+      "body": "() => {\n  let data = S_LEADS.Live_Leads();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  let data = JSObject1.myFun1();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
+      "() => {\n  let data = S_LEADS.Live_Leads();\n  let count = 0;\n  for (let i = data.length - 1; i >= 0; i--) {\n    if (data[i].REMARK == \"LIVE DATA\" && data[i].ACTIVE == true) {\n      count = count + 1;\n    }\n  }\n  return count;\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

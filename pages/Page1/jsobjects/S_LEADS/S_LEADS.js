@@ -37,33 +37,42 @@ export default {
 		}
 		return data;
 	},
-	Old_Leads:()=>{
-		let returnData=[];
-		for (let i= (LEADS.data.length-1); i>=0;i--)
-		{
-			if(LEADS.data[i].REMARK== "OLD LEADS" && LEADS.data[i].ACTIVE==true)
-			{
-				returnData.push(LEADS.data[i])
+	// Old_Leads:()=>{
+		// let returnData=[];
+		// for (let i= (LEADS.data.length-1); i>=0;i--)
+		// {
+			// if(LEADS.data[i].REMARK== "OLD LEADS" && LEADS.data[i].ACTIVE==true)
+			// {
+				// returnData.push(LEADS.data[i])
+			// }
+		// }
+		// return returnData
+	// },
+	Referral_Data :()=>{
+		let data =[];
+		for(let i=0;i<Referral.data.length;i++){
+			if(Referral.data[i].REMARK != null){
+				data.push(Referral.data[i])
 			}
 		}
-		return returnData
+		return data;
 	},
 	L_ACTIVE: ()=>{
-		if(L_REMARK.selectedOptionValue == "CALL BACK" || A_REMARK.selectedOptionValue == "CALL BACK"){
+		if(L_REMARK.selectedOptionValue == "CALL BACK" || A_REMARK.selectedOptionValue == "CALL BACK" || Select9.selectedOptionLabel =="CALL BACK"){
 			return true;
-		}else if(L_REMARK.selectedOptionValue == "RNR" || A_REMARK.selectedOptionValue == "RNR"){
+		}else if(L_REMARK.selectedOptionValue == "RNR" || A_REMARK.selectedOptionValue == "RNR" || Select9.selectedOptionLabel == "RNR"){
 			return true;
 		}else {
 			return false;
 		}
 	},
 	L_RNR_SCHD :()=>{
-		if(L_REMARK.selectedOptionValue == "RNR" || L_REMARK.selectedOptionValue == "RNR"){
+		if(L_REMARK.selectedOptionValue == "RNR" || L_REMARK.selectedOptionValue == "RNR" || Select9.selectedOptionLabel == "RNR"){
 			return DATE_FORMAT.time();
 		}
 	},
 	L_UPDATE :()=>{
-		if(appsmith.store.button_Number !=4){
+		if(appsmith.store.button_Number !=5){
 			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
 				L_UPDATE.run()
 				Sheela_Logs.run()
@@ -76,6 +85,18 @@ export default {
 			}
 
 		}
+	},
+	UPDATE_Popup :()=>{
+			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
+				popUp_Update.run()
+				Sheela_Popup.run()
+			}else if(appsmith.user.username == "sindhuvaspar@gmail.com"){
+				popUp_Update.run()
+				Sindhu_Popup.run()
+			}else if(appsmith.user.username == "a.shet@lustralwater.com"){
+				popUp_Update.run()
+				Aishwarya_Popup.run()
+			}
 	},
 	A_CUSTOMER :()=>{
 		if(A_Name.text !="" && A_NUM.text != ""){
@@ -132,22 +153,9 @@ export default {
 			Sheela_DR.run()
 			Aishwarya_DR.run()
 		} else if (Tabs1.selectedTab == "DAILY LEADS"){
-			// setInterval(JSObject2.SCHD(),1000)
-			setInterval(() => {JSObject2.SCHD() }, 10000, "myTimer");
-			// setInterval(() => {SCHD_CALLS.run() }, 1000, "myTimer");
 			SCHD_CALLS.run()
-			// JSObject2.SCHD()
 			LEADS.run();
 		}
-	},
-	IndexNum:()=>{
-		const rowIndex = LEADS_NUMBER.return_Current_Lead().rowIndex;
-		const updatedRowIndex = rowIndex+2
-		return updatedRowIndex
-	},
-	LeadsUpdate :()=>{
-		L_UPDATE.run()
-		Sheela_Logs.run()
 	},
 	myFun2: async () => {
 			

@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "Api1",
+    "name": "popUp_Update",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -21,14 +21,14 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "UPDATE_ONE"
         },
         "entityType": {
           "data": "ROWS"
         },
         "pagination": {
           "data": {
-            "limit": "20000000",
+            "limit": "20",
             "offset": "0"
           }
         },
@@ -41,6 +41,9 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n\t{\n\t\"rowIndex\":JSObject2.SCHD.data[0].rowIndex,\n\t\"REMARK\":Select9.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":DatePicker9.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":Input10.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}\n}}"
+        },
         "sheetName": {
           "data": "LEADS"
         },
@@ -50,37 +53,12 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "NOT_EQ",
-                "key": "REMARK",
-                "value": "NOT INTERESTED"
-              },
-              {
-                "key": "CALLER",
-                "condition": "EQ",
-                "value": "{{appsmith.user.username}}"
-              },
-              {
-                "key": "ACTIVE",
-                "condition": "EQ",
-                "value": "true"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
@@ -88,21 +66,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[1].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.username"
+      "\n\t{\n\t\"rowIndex\":JSObject2.SCHD.data[0].rowIndex,\n\t\"REMARK\":Select9.selectedOptionLabel,\n\t\"SCHEDULE_DATE\":DatePicker9.formattedDate || S_LEADS.L_RNR_SCHD(),\n\t\"NOTE\":Input10.text,\n\t\"ACTIVE\":S_LEADS.L_ACTIVE()\n\t}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Api1",
+  "id": "Page1_popUp_Update",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63a97bc6fcb7cc4992add4eb"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_64002a1b2127687553737b73"
 }

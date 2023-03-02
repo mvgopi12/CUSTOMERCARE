@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 15000);\n  return \"success\";\n}",
+      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
@@ -35,7 +35,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 15000);\n  return \"success\";\n}"
+      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,

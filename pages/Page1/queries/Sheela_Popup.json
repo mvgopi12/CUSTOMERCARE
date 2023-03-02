@@ -2,7 +2,7 @@
   "pluginType": "SAAS",
   "pluginId": "google-sheets-plugin",
   "unpublishedAction": {
-    "name": "Api1",
+    "name": "Sheela_Popup",
     "datasource": {
       "name": "CUSTOMER_CARE",
       "pluginId": "google-sheets-plugin",
@@ -21,14 +21,14 @@
       "selfReferencingDataPaths": [],
       "formData": {
         "command": {
-          "data": "FETCH_MANY"
+          "data": "INSERT_ONE"
         },
         "entityType": {
           "data": "ROWS"
         },
         "pagination": {
           "data": {
-            "limit": "20000000",
+            "limit": "2000000",
             "offset": "0"
           }
         },
@@ -41,46 +41,24 @@
         "range": {
           "data": ""
         },
+        "rowObjects": {
+          "data": "{{\n{\n\t\"NAME\" :JSObject2.SCHD.data[0].NAME,\n\t\"PHONE_NUMBER\" : JSObject2.SCHD.data[0].PHONE_NUMBER,\n\t\"REMARKS\":Select9.selectedOptionLabel,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n}}"
+        },
         "sheetName": {
-          "data": "LEADS"
+          "data": "LOGS"
         },
         "sheetUrl": {
-          "data": "https://docs.google.com/spreadsheets/d/1MPmOti97p1i5n_kbkvKEGJHLaI9a3VDVjrYpzWVI8Ew/edit"
+          "data": "https://docs.google.com/spreadsheets/d/11Sf6Ljj58E4PEwNXXWR-6zuxPqw60RCgFkg6Cxiw3po/edit"
         },
         "smartSubstitution": {
           "data": true
-        },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
         },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
-            "condition": "AND",
-            "children": [
-              {
-                "condition": "NOT_EQ",
-                "key": "REMARK",
-                "value": "NOT INTERESTED"
-              },
-              {
-                "key": "CALLER",
-                "condition": "EQ",
-                "value": "{{appsmith.user.username}}"
-              },
-              {
-                "key": "ACTIVE",
-                "condition": "EQ",
-                "value": "true"
-              }
-            ]
+            "condition": "AND"
           }
         }
       }
@@ -88,21 +66,21 @@
     "executeOnLoad": false,
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[1].value"
+        "key": "formData.rowObjects.data"
       }
     ],
     "isValid": true,
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.username"
+      "\n{\n\t\"NAME\" :JSObject2.SCHD.data[0].NAME,\n\t\"PHONE_NUMBER\" : JSObject2.SCHD.data[0].PHONE_NUMBER,\n\t\"REMARKS\":Select9.selectedOptionLabel,\n\t\"DATE\":DATE_FORMAT.get_today(),\n\t\"TIME\":DATE_FORMAT.get_time(),\n\t\"CALLER\":appsmith.user.username\n}\n"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_Api1",
+  "id": "Page1_Sheela_Popup",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63a97bc6fcb7cc4992add4eb"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_64002f822fe671394a80991c"
 }

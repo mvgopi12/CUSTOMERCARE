@@ -19,7 +19,7 @@
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {\n  if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    return Text9.text;\n  } else if (Tabs1.selectedTab == \"ADD CUSTOMER\") {\n    return A_Name.text;\n  }\n}",
+      "body": "() => {\n  if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    return Text9.text;\n  } else if (Tabs1.selectedTab == \"ADD CUSTOMER\") {\n    return A_Name.text;\n  } else if (Modal2.isVisible == true) {\n    return Text70.text;\n  }\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": false
@@ -34,7 +34,7 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {\n  if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    return Text9.text;\n  } else if (Tabs1.selectedTab == \"ADD CUSTOMER\") {\n    return A_Name.text;\n  }\n}"
+      "() => {\n  if (Tabs1.selectedTab == \"DAILY LEADS\") {\n    return Text9.text;\n  } else if (Tabs1.selectedTab == \"ADD CUSTOMER\") {\n    return A_Name.text;\n  } else if (Modal2.isVisible == true) {\n    return Text70.text;\n  }\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,

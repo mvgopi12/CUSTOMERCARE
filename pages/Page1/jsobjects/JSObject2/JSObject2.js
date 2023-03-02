@@ -18,18 +18,13 @@ export default {
 	 }
 		return data
 	},
-	
-	setIntervalFun :()=>{
-		console.log("Hello")
-	},
-	Interval :()=>{
-		return (setInterval(JSObject2.setIntervalFun(),1000))
-	},
 	returnName :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
 			return Text9.text
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_Name.text
+		}else if(Modal2.isVisible == true){
+			return Text70.text
 		}
 	},
 	returnPH :()=>{
@@ -37,6 +32,8 @@ export default {
 			return L_NUM.text
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_NUM.text
+		}else if(Modal2.isVisible){
+			return Text72.text
 		}
 	},
 	returnRemarks :()=>{

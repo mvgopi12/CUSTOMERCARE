@@ -22,9 +22,9 @@
       "body": "() => {\n  let data = [];\n  for (let i = 0; i < SCHD_CALLS.data.length; i++) {\n    let date = DATE_FORMAT.to_date(SCHD_CALLS.data[i].SCHEDULE_DATE);\n    if (date == DATE_FORMAT.get_today() && SCHD_CALLS.data[i].REMARK == \"CALL BACK\") {\n      showModal(\"Modal2\");\n      data.push(SCHD_CALLS.data[i]);\n    }\n  }\n  return data;\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
-    "executeOnLoad": false,
+    "executeOnLoad": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
