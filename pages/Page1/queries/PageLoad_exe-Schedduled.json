@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "onPageLoad",
-    "fullyQualifiedName": "PageLoad_exe.onPageLoad",
+    "name": "Schedduled",
+    "fullyQualifiedName": "PageLoad_exe.Schedduled",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -16,16 +16,15 @@
     "pageId": "Page1",
     "collectionId": "Page1_PageLoad_exe",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}",
+      "body": "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      SCHD_CALLS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}",
       "selfReferencingDataPaths": [],
       "jsArguments": [],
       "isAsync": true
     },
     "executeOnLoad": true,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -35,14 +34,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
+      "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      SCHD_CALLS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
     ],
     "userSetOnLoad": true,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "Page1_PageLoad_exe.onPageLoad",
+  "id": "Page1_PageLoad_exe.Schedduled",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63ff15872127687553736e87"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_640183918a12fa7e07dea759"
 }
