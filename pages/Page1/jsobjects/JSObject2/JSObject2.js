@@ -23,18 +23,20 @@ export default {
 			return Text9.text
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_Name.text
-		}else if(Modal2.isVisible == true){
-			return Text70.text
 		}
+		// else if(Modal2.isVisible == true){
+			// return Text70.text
+		// }
 	},
 	returnPH :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
 			return L_NUM.text
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_NUM.text
-		}else if(Modal2.isVisible){
-			return Text72.text
 		}
+		// else if(Modal2.isVisible == true){
+			// return Text72.text
+		// }
 	},
 	returnRemarks :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
