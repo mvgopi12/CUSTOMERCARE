@@ -20,7 +20,7 @@ export default {
 	},
 	returnName :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
-			return Text9.text
+			return LEADS_NUMBER.return_Current_Lead().NAME
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_Name.text
 		}
@@ -30,7 +30,7 @@ export default {
 	},
 	returnPH :()=>{
 		if(Tabs1.selectedTab == "DAILY LEADS"){
-			return L_NUM.text
+			return LEADS_NUMBER.return_Current_Lead().PHONE_NUMBER
 		}else if(Tabs1.selectedTab == "ADD CUSTOMER"){
 			return A_NUM.text
 		}

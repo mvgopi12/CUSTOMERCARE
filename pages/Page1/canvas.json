@@ -7730,13 +7730,13 @@
                   "widgetName": "Canvas3",
                   "displayName": "Canvas",
                   "topRow": 0,
-                  "bottomRow": 520,
+                  "bottomRow": 530,
                   "parentRowSpace": 1,
                   "type": "CANVAS_WIDGET",
                   "canExtend": true,
                   "hideCard": true,
                   "shouldScrollContents": false,
-                  "minHeight": 446,
+                  "minHeight": 536,
                   "parentColumnSpace": 1,
                   "leftColumn": 0,
                   "dynamicBindingPathList": [
@@ -8445,7 +8445,7 @@
                 }
               ],
               "key": "o4zkzsyynd",
-              "height": 446,
+              "height": 536,
               "isDeprecated": false,
               "rightColumn": 43,
               "detachFromLayout": true,
@@ -13774,7 +13774,7 @@
                 "notification"
               ],
               "topRow": 6,
-              "bottomRow": 43,
+              "bottomRow": 436,
               "parentRowSpace": 10,
               "type": "MODAL_WIDGET",
               "hideCard": false,
