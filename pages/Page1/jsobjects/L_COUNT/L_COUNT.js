@@ -57,7 +57,7 @@ export default {
 		return count
 	},
 	BM_INSTALL :()=>{
-		if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username =="sindhuvaspar@gmail.com" || appsmith.user.username =="mvgopi@lustralwater.com"){
+		if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username =="sindhuvaspar@gmail.com" || appsmith.user.username =="mvgopi@lustralwater.com" || appsmith.user.username == "support@lustralwater.com"){
 			return Banguluru_Installations.data[0].count;
 		}else if(appsmith.user.username == "a.shet@lustralwater.com"){
 			return Mumbai_Installations.data[0].count;

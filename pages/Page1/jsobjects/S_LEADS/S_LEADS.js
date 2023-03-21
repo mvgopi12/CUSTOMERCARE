@@ -82,6 +82,9 @@ export default {
 			}else if(appsmith.user.username == "a.shet@lustralwater.com"){
 				L_UPDATE.run()
 				Aishwarya_Logs.run()
+			}else if(appsmith.user.username == "support@lustralwater.com"){
+				L_UPDATE.run()
+				Sheela_Logs.run()
 			}
 
 		}
