@@ -73,7 +73,7 @@ export default {
 	},
 	L_UPDATE :()=>{
 		if(appsmith.store.button_Number !=5){
-			if(appsmith.user.username == "sheela@lustralwater.com"){
+			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
 				L_UPDATE.run()
 				Sheela_Logs.run()
 			}else if(appsmith.user.username == "sindhuvaspar@gmail.com"){
