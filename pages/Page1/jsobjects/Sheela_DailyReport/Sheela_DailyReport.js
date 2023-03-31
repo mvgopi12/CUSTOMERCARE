@@ -31,7 +31,7 @@ export default {
 	DR_DEMO :()=>{
 		let count = 0;
 		for(let i = (SheelaLogs.data.length-1); i>=0;i--){
-			if(SheelaLogs.data[i].REMARKS == "DEMO REQUESTE"){
+			if(SheelaLogs.data[i].REMARKS == "DEMO REQUEST"){
 				count = count + 1;
 			}
 		}

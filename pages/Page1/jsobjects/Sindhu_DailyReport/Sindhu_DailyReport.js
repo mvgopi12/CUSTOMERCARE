@@ -31,7 +31,7 @@ export default {
 	DR_DEMO :()=>{
 		let count = 0;
 		for(let i = (SindhuLogs.data.length-1); i>=0;i--){
-			if(SindhuLogs.data[i].REMARKS == "DEMO REQUESTE"){
+			if(SindhuLogs.data[i].REMARKS == "DEMO REQUEST"){
 				count = count + 1;
 			}
 		}
