@@ -2735,7 +2735,7 @@
                               ],
                               "shouldTruncate": false,
                               "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
-                              "text": "{{(()=>{\n\tif(appsmith.user.username == \"sindhuvaspar@gmail.com\"){return Sindhu_DailyReport.DR_RNR()}\nelse if(appsmith.user.username == \"a.shet@lustralwater.com\"){return Aishwarya_DailyReport.DR_RNR()()}else if(appsmith.user.username == \"sheela@lustralwater.com\" || \"support@lustralwater.com\" || \"mvgopi@lustralwater.com\"){return Sheela_DailyReport.DR_RNR()()}\n})()}}",
+                              "text": "{{(()=>{\n\tif(appsmith.user.username == \"sindhuvaspar@gmail.com\"){return Sindhu_DailyReport.DR_RNR()}\nelse if(appsmith.user.username == \"a.shet@lustralwater.com\"){return Aishwarya_DailyReport.DR_RNR()}else if(appsmith.user.username == \"sheela@lustralwater.com\" || \"support@lustralwater.com\" || \"mvgopi@lustralwater.com\"){return Sheela_DailyReport.DR_RNR()}\n})()}}",
                               "key": "o4hzxm69zx",
                               "isDeprecated": false,
                               "rightColumn": 23,
@@ -14660,23 +14660,25 @@
           ],
           [
             {
-              "id": "Page1_AishwaryaLogs",
-              "name": "AishwaryaLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_SCHD_CALLS",
               "name": "SCHD_CALLS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [
                 "DATE_FORMAT.get_today_with_minutes()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_AishwaryaLogs",
+              "name": "AishwaryaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
