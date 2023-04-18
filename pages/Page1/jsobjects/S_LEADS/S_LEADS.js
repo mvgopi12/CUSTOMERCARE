@@ -90,7 +90,7 @@ export default {
 		}
 	},
 	UPDATE_Popup :()=>{
-			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
+			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com" || appsmith.user.username == "support@lustralwater.com"){
 				popUp_Update.run()
 				Sheela_Popup.run()
 			}else if(appsmith.user.username == "sindhuvaspar@gmail.com"){
@@ -103,7 +103,7 @@ export default {
 	},
 	A_CUSTOMER :()=>{
 		if(A_Name.text !="" && A_NUM.text != ""){
-			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com"){
+			if(appsmith.user.username == "sheela@lustralwater.com" || appsmith.user.username == "mvgopi@lustralwater.com" || appsmith.user.username == "support@lustralwater.com"){
 			C_INSERT.run()
 				Sheela_Logs.run()	
 				showModal("LEAD_ADDED_Success")
