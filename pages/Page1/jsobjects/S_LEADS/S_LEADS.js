@@ -30,7 +30,7 @@ export default {
 		let data=[];
 		for (let i=0; i<LEADS.data.length; i++)
 		{
-			if(LEADS.data[i].REMARK=="INTERESTED" || LEADS.data[i].REMARK=="SWITCH OFF/NOT REACHBLE" && LEADS.data[i].ACTIVE==true)
+			if(LEADS.data[i].REMARK=="INTERESTED" || LEADS.data[i].REMARK=="SWITCH OFF/NOT REACHBLE" || LEADS.data[i].REMARK=="CUSTOMER DISCONNECTING" && LEADS.data[i].ACTIVE==true)
 			{
 				data.push(LEADS.data[i]);
 			}
