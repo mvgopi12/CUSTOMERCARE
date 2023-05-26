@@ -25,7 +25,7 @@ export default {
 		let data = S_LEADS.Followups_Leads();
 		let count = 0;
 		for(let i = (data.length-1); i>=0;i--){
-			if(data[i].REMARK == "INTERESTED" || data[i].REMARK == "SWITCH OFF/NOT REACHBLE" || data[i].REMARK == "CUSTOMER DISCONNECTING"&& data[i].ACTIVE == true){
+			if(data[i].REMARK == "INTERESTED" || data[i].REMARK == "SWITCH OFF/NOT REACHBLE" ||data[i].REMARK == "CUSTOMER WILL CALLBACK" || data[i].REMARK == "CUSTOMER DISCONNECTING"&& data[i].ACTIVE == true){
 				count = count + 1;
 			}
 		}
