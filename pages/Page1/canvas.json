@@ -14529,6 +14529,17 @@
           ],
           [
             {
+              "id": "Page1_PageLoad_exe.Livedata",
+              "name": "PageLoad_exe.Livedata",
+              "collectionId": "Page1_PageLoad_exe",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      LEADS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
               "id": "Page1_PageLoad_exe.Schedduled",
               "name": "PageLoad_exe.Schedduled",
               "collectionId": "Page1_PageLoad_exe",
