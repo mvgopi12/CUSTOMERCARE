@@ -31,19 +31,10 @@ export default {
 		}
 		return count;
 	},
-	C_OLDLEADS :()=>{
-		let data = JSObject1.myFun1();
-		let count = 0;
-		for(let i = (data.length-1); i>=0;i--){
-			if(data[i].REMARK == "OLD LEADS" && data[i].ACTIVE == true){
-				count = count + 1;
-			}
-		}
-		return count;
-	},
+	
 	C_TOTALCALLS :()=>{
 		let count =0;
-		count = L_COUNT.C_LIVE() + L_COUNT.C_SCHD() + L_COUNT.C_FOLLOWUPS() + L_COUNT.C_OLDLEADS();
+		count = L_COUNT.C_LIVE() + L_COUNT.C_SCHD() + L_COUNT.C_FOLLOWUPS();
 		return count;
 	},
 	C_REFERRAL :()=>{

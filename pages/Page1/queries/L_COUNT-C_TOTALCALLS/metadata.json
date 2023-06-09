@@ -16,7 +16,7 @@
     "pageId": "Page1",
     "collectionId": "Page1_L_COUNT",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 0,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
@@ -39,5 +39,5 @@
   },
   "id": "Page1_L_COUNT.C_TOTALCALLS",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_63638942956dd31e95b0af24"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_6482bdce5262b67a9831011f"
 }

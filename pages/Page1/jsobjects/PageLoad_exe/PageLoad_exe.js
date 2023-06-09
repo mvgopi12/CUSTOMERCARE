@@ -12,5 +12,12 @@ export default {
         setInterval(() => {SCHD_CALLS.run() }, 10000, "noPageLoadRepeatTimer");
     }, 22000);
 		return "success";
-	}
+	},
+	Livedata: async () => {
+		//use async-await or promises
+		setTimeout(function(){
+        setInterval(() => {LEADS.run() }, 10000, "noPageLoadRepeatTimer");
+    }, 22000);
+		return "success";
+	},
 }
