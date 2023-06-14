@@ -19,7 +19,7 @@
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 79,
+          "version": 80,
           "minHeight": 1292,
           "dynamicTriggerPathList": [],
           "parentColumnSpace": 1,
@@ -4665,7 +4665,11 @@
                                 "rowIndex",
                                 "TECHNICIAN"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "tableData"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 46,
                               "columnWidthMap": {
@@ -5195,7 +5199,11 @@
                                 "status",
                                 "action"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "tableData"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 116,
                               "columnWidthMap": {
@@ -5501,7 +5509,11 @@
                                 "TECHNICIAN",
                                 "rowIndex"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "tableData"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 45,
                               "columnWidthMap": {
@@ -6290,7 +6302,11 @@
                                 "TECHNICIAN",
                                 "rowIndex"
                               ],
-                              "dynamicPropertyPathList": [],
+                              "dynamicPropertyPathList": [
+                                {
+                                  "key": "tableData"
+                                }
+                              ],
                               "displayName": "Table",
                               "bottomRow": 46,
                               "columnWidthMap": {
