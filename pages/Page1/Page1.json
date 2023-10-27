@@ -1,0 +1,234 @@
+{
+  "unpublishedPage": {
+    "name": "Page1",
+    "slug": "page1",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1530,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 87,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Page1_Banguluru_Installations",
+              "name": "Banguluru_Installations",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_LEADS",
+              "name": "LEADS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_M_TARGET",
+              "name": "M_TARGET",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Mumbai_Installations",
+              "name": "Mumbai_Installations",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_PageLoad_exe.Livedata",
+              "name": "PageLoad_exe.Livedata",
+              "collectionId": "Page1_PageLoad_exe",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      LEADS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_PageLoad_exe.Schedduled",
+              "name": "PageLoad_exe.Schedduled",
+              "collectionId": "Page1_PageLoad_exe",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      SCHD_CALLS.run();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_Referral",
+              "name": "Referral",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_EMI_EIGHT",
+              "name": "EMI_EIGHT",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_THREEM",
+              "name": "EMI_THREEM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_TM",
+              "name": "EMI_TM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_REMARKS",
+              "name": "REMARKS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_JSObject2.SCHD",
+              "name": "JSObject2.SCHD",
+              "collectionId": "Page1_JSObject2",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  let data = [];\n  for (let i = 0; i < SCHD_CALLS.data.length; i++) {\n    let date = DATE_FORMAT.to_date(SCHD_CALLS.data[i].SCHEDULE_DATE);\n    if (date == DATE_FORMAT.get_today() && SCHD_CALLS.data[i].REMARK == \"CALL BACK\") {\n      showModal(\"Modal2\");\n      data.push(SCHD_CALLS.data[i]);\n    }\n  }\n  return data;\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_PageLoad_exe.onPageLoad",
+              "name": "PageLoad_exe.onPageLoad",
+              "collectionId": "Page1_PageLoad_exe",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_AishwaryaLogs",
+              "name": "AishwaryaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_SCHD_CALLS",
+              "name": "SCHD_CALLS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today_with_minutes()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_SheelaLogs",
+              "name": "SheelaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_SindhuLogs",
+              "name": "SindhuLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Page1",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "63634e3ebaf07e59ff35088c_63634e3ebaf07e59ff35088e"
+}
