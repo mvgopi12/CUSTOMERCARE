@@ -37,16 +37,6 @@
               "timeoutInMillisecond": 10000
             },
             {
-              "id": "Page1_LEADS",
-              "name": "LEADS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
               "id": "Page1_M_TARGET",
               "name": "M_TARGET",
               "confirmBeforeExecute": false,
@@ -60,6 +50,37 @@
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
               "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_EMI_EIGHT",
+              "name": "EMI_EIGHT",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_EMI_THREEM",
+              "name": "EMI_THREEM",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Page1_LEADS_NUMBER.L_PAGE",
+              "name": "LEADS_NUMBER.L_PAGE",
+              "collectionId": "Page1_LEADS_NUMBER",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
@@ -85,6 +106,16 @@
               "timeoutInMillisecond": 10000
             },
             {
+              "id": "Page1_REMARKS",
+              "name": "REMARKS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
               "id": "Page1_Referral",
               "name": "Referral",
               "confirmBeforeExecute": false,
@@ -97,19 +128,14 @@
           ],
           [
             {
-              "id": "Page1_EMI_EIGHT",
-              "name": "EMI_EIGHT",
+              "id": "Page1_AishwaryaLogs",
+              "name": "AishwaryaLogs",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_EMI_THREEM",
-              "name": "EMI_THREEM",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
               "timeoutInMillisecond": 10000
             },
             {
@@ -121,15 +147,48 @@
                 "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
-            }
-          ],
-          [
+            },
             {
-              "id": "Page1_REMARKS",
-              "name": "REMARKS",
+              "id": "Page1_LEADS",
+              "name": "LEADS",
               "confirmBeforeExecute": false,
               "pluginType": "SAAS",
-              "jsonPathKeys": [],
+              "jsonPathKeys": [
+                "appsmith.user.email"
+              ],
+              "timeoutInMillisecond": 30000
+            },
+            {
+              "id": "Page1_SCHD_CALLS",
+              "name": "SCHD_CALLS",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today_with_minutes()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 30000
+            },
+            {
+              "id": "Page1_SheelaLogs",
+              "name": "SheelaLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Page1_SindhuLogs",
+              "name": "SindhuLogs",
+              "confirmBeforeExecute": false,
+              "pluginType": "SAAS",
+              "jsonPathKeys": [
+                "DATE_FORMAT.get_today()",
+                "appsmith.user.username"
+              ],
               "timeoutInMillisecond": 10000
             }
           ],
@@ -154,65 +213,6 @@
               "pluginType": "JS",
               "jsonPathKeys": [
                 "async () => {\n  setTimeout(function () {\n    setInterval(() => {\n      JSObject2.SCHD();\n    }, 10000, \"noPageLoadRepeatTimer\");\n  }, 22000);\n  return \"success\";\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_LEADS_NUMBER.L_PAGE",
-              "name": "LEADS_NUMBER.L_PAGE",
-              "collectionId": "Page1_LEADS_NUMBER",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "() => {\n  storeValue(\"current_Live_card\", 0);\n  storeValue(\"card\", S_LEADS.Live_Leads());\n  storeValue(\"current_Schd_card\", 0);\n  storeValue(\"card\", S_LEADS.Scheduled_Leads());\n  storeValue(\"current_Followups_card\", 0);\n  storeValue(\"card\", S_LEADS.Followups_Leads());\n  storeValue(\"current_Oldleads_card\", 0);\n  storeValue(\"card\", S_LEADS.Old_Leads());\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Page1_AishwaryaLogs",
-              "name": "AishwaryaLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_SCHD_CALLS",
-              "name": "SCHD_CALLS",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today_with_minutes()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_SheelaLogs",
-              "name": "SheelaLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
-                "appsmith.user.username"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Page1_SindhuLogs",
-              "name": "SindhuLogs",
-              "confirmBeforeExecute": false,
-              "pluginType": "SAAS",
-              "jsonPathKeys": [
-                "DATE_FORMAT.get_today()",
-                "appsmith.user.username"
               ],
               "timeoutInMillisecond": 10000
             }

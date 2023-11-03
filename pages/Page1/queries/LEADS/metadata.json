@@ -15,7 +15,7 @@
     },
     "pageId": "Page1",
     "actionConfiguration": {
-      "timeoutInMillisecond": 10000,
+      "timeoutInMillisecond": 30000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
       "selfReferencingDataPaths": [],
@@ -68,12 +68,12 @@
               {
                 "condition": "NOT_EQ",
                 "key": "REMARK",
-                "value": "NOT INTRESTED"
+                "value": "NOT INTERESTED"
               },
               {
                 "key": "CALLER",
                 "condition": "EQ",
-                "value": "{{appsmith.user.username}}"
+                "value": "{{appsmith.user.email}}"
               },
               {
                 "key": "ACTIVE",
@@ -95,14 +95,15 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "appsmith.user.username"
+      "appsmith.user.email"
     ],
-    "userSetOnLoad": true,
+    "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
-    "userPermissions": []
+    "userPermissions": [],
+    "createdAt": "2023-10-31T05:19:45Z"
   },
   "id": "Page1_LEADS",
   "deleted": false,
-  "gitSyncId": "63634e3ebaf07e59ff35088c_636350c77045bd18a5ff9c64"
+  "gitSyncId": "63634e3ebaf07e59ff35088c_65408e71e6187b00020f11ad"
 }
